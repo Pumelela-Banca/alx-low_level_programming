@@ -11,7 +11,7 @@
 int main(void)
 {
 	int a, b;
-	
+
 	b = 123;
 	for (a = 97; a < b; a++)
 	{
