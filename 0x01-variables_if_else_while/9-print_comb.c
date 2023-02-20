@@ -18,7 +18,7 @@ int main(void)
 	{
 		putchar(a);
 
-		if (a == 58)
+		if (a == 57)
 		{
 			putchar('\n');
 			break;
