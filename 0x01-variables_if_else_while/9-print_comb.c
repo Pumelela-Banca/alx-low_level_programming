@@ -21,11 +21,10 @@ int main(void)
 		if (a == 58)
 		{
 			putchar('\n');
-			break ;
+			break;
 		}
 		putchar(' ');
 		putchar(',');
-
 	}
 	return (0);
 }
