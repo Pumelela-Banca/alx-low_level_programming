@@ -10,7 +10,7 @@ int main(void)
 {
 	int a, b;
 
-	b = 353;
+	b = 354;
 	for (a = 379; a > b; a--)
 	{
 		putchar(a);
