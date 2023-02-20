@@ -3,13 +3,18 @@
 /**
 * main - Entry point
 *
-* display nums from 0 to 10
-*
 * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	printif("0123456789\n");
+	int a, b;
+
+	b = 353;
+	for (a = 379; a > b; a--)
+	{
+		putchar(a);
+	}
+	putchar('\n');
 	return (0);
 }
