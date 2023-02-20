@@ -17,11 +17,13 @@ int main(void)
 	for (a = 48; a < b; a++)
 	{
 		putchar(a);
-		putchar(' ');
-		putchar(',');
 
 		if (a == 58)
 			putchar('\n');
+
+		putchar(' ');
+		putchar(',');
+
 	}
 	return (0);
 }
