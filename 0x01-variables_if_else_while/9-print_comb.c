@@ -23,4 +23,5 @@ int main(void)
 		if (a == 58)
 			putchar('\n');
 	}
+	return (0);
 }

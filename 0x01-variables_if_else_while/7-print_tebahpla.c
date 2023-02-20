@@ -10,8 +10,8 @@ int main(void)
 {
 	int a, b;
 
-	b = 354;
-	for (a = 379; a > b; a--)
+	b = 352;
+	for (a = 378; a > b; a--)
 	{
 		putchar(a);
 	}
