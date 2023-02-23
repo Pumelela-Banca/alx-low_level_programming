@@ -1,12 +1,5 @@
 #include "_putchar.c"
 
-/* function prototype with char as argument*/
-int _putchar(char);
-
-/* proto type */
-
-void print_alphabet(void);
-
 /**
 * print_alphabet - Print string using loop.
 *

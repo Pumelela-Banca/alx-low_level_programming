@@ -1,9 +1,5 @@
 #include "_putchar.c"
 
-/* prototype _putchar */ 
-
-int _putchar(char);
-
 /**
 * main - Entry point
 *

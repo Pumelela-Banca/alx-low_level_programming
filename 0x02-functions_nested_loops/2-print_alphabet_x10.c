@@ -1,14 +1,3 @@
-#include "_putchar.c"
-#include "1-alphabet.c"
-
-/* Prototype _putchar */
-
-int _putchar(char);
-
-/* prototype print_alphabet */
-
-void print_alphabet(void);
-
 /**
  * print_alphabet_x10 - Print alphabet 10X
  *
