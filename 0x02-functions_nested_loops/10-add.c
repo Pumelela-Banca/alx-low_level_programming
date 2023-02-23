@@ -1,6 +1,6 @@
 /**
  * add - add two intergers
- * 
+ *
  * @a: first number
  * @b: second number
  *
