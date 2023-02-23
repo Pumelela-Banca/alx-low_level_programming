@@ -2,6 +2,9 @@
 
 /* function prototype with char as argument*/
 int _putchar(char);
+
+/* proto type */
+
 void print_alphabet(void);
 
 /**
@@ -12,7 +15,9 @@ void print_alphabet(void);
 
 void print_alphabet(void)
 {
-	for (int a =  97; a < 123; a++)
+	int a;
+	
+	for (a =  97; a < 123; a++)
 	{
 		_putchar(a);
 	}
