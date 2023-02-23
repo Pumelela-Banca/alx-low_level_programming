@@ -12,17 +12,17 @@ void print_to_98(int n)
 {
 	int ni;
 
-	if (n <= 97)
+	if (n < 98)
 	{
-		for (ni = n; ni < 97; ni++)
+		for (ni = n; ni < 98; ni++)
 		{
 			printf("%d, ", ni);
 		}
 		printf("98\n");
 	}
-	else if (n >= 99)
+	else if (n > 98)
 	{
-		for (ni = n; ni > 99; ni--)
+		for (ni = n; ni > 98; ni--)
 		{
 			printf("%d, ", ni);
 		}
