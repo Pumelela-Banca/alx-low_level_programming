@@ -13,6 +13,5 @@ int print_last_digit(int a)
 	int last;
 
 	last  = a % 10;
-	printf("%d", last);
 	return (last);
 }
