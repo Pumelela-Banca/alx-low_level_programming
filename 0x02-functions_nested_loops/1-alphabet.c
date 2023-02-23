@@ -1,5 +1,3 @@
-#include "_putchar.c"
-
 /**
 * print_alphabet - Print string using loop.
 *
