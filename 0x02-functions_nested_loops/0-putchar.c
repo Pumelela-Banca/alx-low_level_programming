@@ -19,7 +19,7 @@ int main(void)
 	while (sum < 9)
 	{
 		_putchar(name[sum]);
-		+++sum;
+		++sum;
 	}
 	_putchar('\n');
 	return (0);
