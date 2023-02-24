@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * print_triangle- print triangles
  * @size: size of triagle.
@@ -9,5 +7,5 @@
 
 void print_triangle(int size)
 {
-
+	int start, start2;
 }
