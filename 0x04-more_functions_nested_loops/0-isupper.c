@@ -9,7 +9,7 @@
  * Return: 0 or  1.
  */
 
-int _isupper(int c)
+int _isupper(char c)
 {
 	if (isupper(c) == 1)
 	{
