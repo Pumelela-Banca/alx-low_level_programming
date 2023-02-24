@@ -8,7 +8,6 @@
 #include "6-print_line.c"
 #include "7-print_diagonal.c"
 #include "8-print_square.c"
-#include "9-fizz_buzz.c"
 #include "10-print_triangle.c"
 
 
