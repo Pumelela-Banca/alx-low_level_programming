@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _isupper - check if upper case.
  *
@@ -10,7 +8,9 @@
 
 int _isupper(char c)
 {
-	int a = (int)(c);
+	int a;
+
+	a = (int)(c);
 
 	if ((int)(c) > 64 && (int)(c) < 91)
 	{
