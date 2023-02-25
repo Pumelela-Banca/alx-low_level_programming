@@ -2,8 +2,6 @@
 
 /**
  * main - entry point
- *
- * Return - void.
  */
 
 void main(void)
