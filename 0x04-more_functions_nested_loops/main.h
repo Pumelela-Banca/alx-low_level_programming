@@ -9,7 +9,6 @@
 #include "7-print_diagonal.c"
 #include "8-print_square.c"
 #include "10-print_triangle.c"
-
 int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
