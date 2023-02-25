@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_most_numbers - print from 1-9 except 2 and 4
  *

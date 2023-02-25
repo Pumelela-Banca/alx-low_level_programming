@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_numbers - print numbes 0-9
  *

@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _isdigit - See if int is 0 - 9
  *
