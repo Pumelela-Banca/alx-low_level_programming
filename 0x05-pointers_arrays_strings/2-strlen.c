@@ -20,4 +20,5 @@ int _strlen(char *s)
 			return (len);
 		}
 	}
+	return (0);
 }
