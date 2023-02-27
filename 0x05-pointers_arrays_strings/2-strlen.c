@@ -15,7 +15,7 @@ int _strlen(char *s)
 	for (len = 1; len < 1000; len++)
 	{
 		stop = *(s + len);
-		if (stop == '\0')
+		if (stop == '\0' && len != 1)
 		{
 			return (len);
 		}
