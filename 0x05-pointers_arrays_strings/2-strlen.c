@@ -19,7 +19,7 @@ int _strlen(char *s)
 		{
 			return (len);
 		}
-		else
+		else if (stop == '\0')
 		{
 			return (len);
 		}
