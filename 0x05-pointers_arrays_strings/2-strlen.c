@@ -14,12 +14,13 @@ int _strlen(char *s)
 
 	for (len = 1; len < 1000; len++)
 	{
-		stop = *(s + len);
 		if (stop == '\0' && len == 1)
 		{
 			return (len);
 		}
-		else if (stop == '\0')
+		stop = *(s + len);
+
+		if (stop == '\0')
 		{
 			return (len);
 		}
