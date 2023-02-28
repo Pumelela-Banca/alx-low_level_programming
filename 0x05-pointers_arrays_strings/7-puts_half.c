@@ -9,7 +9,7 @@
 
 void puts_half(char *str)
 {
-	int n, loc;
+	int n, loc, ood;
 
 	char position;
 
@@ -31,7 +31,8 @@ void puts_half(char *str)
 			}
 			else
 			{
-				loc =  (n - 1) / 2;
+				ood = n - 1;
+				loc =  odd / 2;
 			}
 			while (loc < n)
 			{
