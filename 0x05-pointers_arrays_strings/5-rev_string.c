@@ -30,11 +30,11 @@ void rev_string(char *s)
 			{
 				if (size == 0)
 				{
-					hold = *keep;
+					hold = keep[0];
 				}
 				else
 				{
-					hold = *(keep + size);
+					hold = keep[size];
 				}
 				s[size] = hold;
 				size--;
