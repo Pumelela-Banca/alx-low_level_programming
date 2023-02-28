@@ -27,11 +27,11 @@ void puts_half(char *str)
 		{
 			if (n % 2 == 0)
 			{
-				loc = 2;
+				loc =  n / 2 ;
 			}
 			else
 			{
-				loc = (n - 1) / 2;
+				loc =  (n - 1) / 2;
 			}
 			while (loc < n)
 			{
