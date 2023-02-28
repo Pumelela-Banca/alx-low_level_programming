@@ -21,13 +21,13 @@ void puts_half(char *str)
 			break;
 		}
 
-		position = str[n];
+		position = *(str + n);
 
 		if (position == '\0')
 		{
 			if (n == 2)
 			{
-				_putchar(str[n]);
+				_putchar(*(str + n));
 			}
 			if (n % 2 == 0)
 			{
@@ -39,7 +39,7 @@ void puts_half(char *str)
 			}
 			while (loc < n)
 			{
-				_putchar(str[n]);
+				_putchar(*(str + n));
 				loc++;
 			}
 			_putchar('\n');
@@ -48,3 +48,11 @@ void puts_half(char *str)
 	}
 }
 
+int main(void)
+{
+    char *str;
+
+    str = "0123456789";
+    puts_half(str);
+    return (0);
+}
