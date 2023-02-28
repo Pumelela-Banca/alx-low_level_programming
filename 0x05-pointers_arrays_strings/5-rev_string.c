@@ -36,7 +36,7 @@ void rev_string(char *s)
 				}
 				else
 				{
-					[hold] = *(keep + size);
+					s[hold] = *(keep + size);
 				}
 				hold++;
 				size--;
