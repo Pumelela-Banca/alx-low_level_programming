@@ -35,7 +35,7 @@ void puts_half(char *str)
 			}
 			while (loc < n)
 			{
-				position = *(str + n);
+				position = *(str + loc);
 				_putchar(position);
 				loc++;
 			}
