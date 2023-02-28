@@ -32,7 +32,7 @@ void rev_string(char *s)
 			{
 				if (size == 0)
 				{
-					 s[hold] = *keep;
+					s[hold] = *keep;
 				}
 				else
 				{
