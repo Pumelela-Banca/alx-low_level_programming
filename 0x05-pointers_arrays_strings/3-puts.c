@@ -24,7 +24,7 @@ void _puts(char *str)
 			_putchar('\n');
 			break;
 		}
-		else if (len > 0)
+		else
 		{
 			stop = *(str + len);
 			_putchar(stop);
