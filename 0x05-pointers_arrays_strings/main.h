@@ -2,7 +2,6 @@
 #define HEADER_FILE
 
 #include <stdio.h>
-#include  "_putchar.c"
 
 void reset_to_98(int *n);
 
