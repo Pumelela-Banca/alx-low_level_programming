@@ -22,13 +22,13 @@ void print_rev(char *s)
 
 		if (stop == '\0')
 		{
+			size = len - 1;
+			while (size >  -1)
+			{
+				_putchar(*(s + len));
+				size--;
+			}
 			break;
 		}
-	}
-	
-	while (len >  -1)
-	{
-		_putchar(*(s + len));
-		len--;
 	}
 }
