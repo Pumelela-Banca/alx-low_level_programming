@@ -27,7 +27,7 @@ void puts_half(char *str)
 		{
 			if (n % 2 == 0)
 			{
-				loc =  n / 2 ;
+				loc =  n / 2;
 			}
 			else
 			{
@@ -35,7 +35,8 @@ void puts_half(char *str)
 			}
 			while (loc < n)
 			{
-				_putchar(*(str + n));
+				position = *(str + n);
+				_putchar(posiition);
 				loc++;
 			}
 			_putchar('\n');
