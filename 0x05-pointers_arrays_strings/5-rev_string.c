@@ -9,7 +9,9 @@
 void rev_string(char *s)
 {
 	int len, stop, size, hold;
-
+	char keep;
+	
+	keep = *s;
 
 	for (len = 0; len < 1000; len++)
 	{
@@ -28,11 +30,11 @@ void rev_string(char *s)
 			{
 				if (size == 0)
 				{
-					hold = *s;
+					hold = *keep;
 				}
 				else
 				{
-					hold = *(s + size);
+					hold = *(keep + size);
 				}
 				s[size] = hold;
 				size--;
