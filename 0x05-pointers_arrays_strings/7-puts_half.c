@@ -32,7 +32,7 @@ void puts_half(char *str)
 			else
 			{
 				ood = n - 1;
-				loc =  odd / 2;
+				loc =  ood / 2;
 			}
 			while (loc < n)
 			{
