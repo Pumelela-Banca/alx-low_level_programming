@@ -12,13 +12,16 @@ void _puts(char *str)
 {
 	int len, stop;
 
-	for (len = 0; len < 1000; len++)
+	for (len = 0; len < 1000000; len++)
 	{
-		stop = *str;
+		if (len == 0)
+		{
+			stop = *str;
+		}
 		if (stop == '\0')
 		{
 			_putchar('\n');
-			len = 1001;
+			break;
 		}
 		stop = *(str + len);
 		_putchar(stop);
