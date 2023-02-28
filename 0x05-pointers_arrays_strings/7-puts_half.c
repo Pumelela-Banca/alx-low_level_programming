@@ -14,7 +14,7 @@ void puts_half(char *str)
 	char position;
 
 	for (n = 0; n < 1000; n++)
-	{  
+	{
 		if (*str == '\0')
 		{
 			_putchar('\n');
@@ -25,10 +25,6 @@ void puts_half(char *str)
 
 		if (position == '\0')
 		{
-			if (n == 2)
-			{
-				_putchar(*(str + n));
-			}
 			if (n % 2 == 0)
 			{
 				loc = 2;
