@@ -6,7 +6,7 @@
  * @src : copy this to dest
  * @dest : copy of src
  *
- * Return : char
+ * Return : srting value.
  */
 
 char *_strcpy(char *dest, char *src)
@@ -23,7 +23,7 @@ char *_strcpy(char *dest, char *src)
 	dest[0] = *src;
 	for (copynow = 1; copynow < count; copynow++)
 	{
-		dest[0] = *(src + 1);
+		dest[0] = *(src + count);
 	}
 	return (dest);
 }
