@@ -9,15 +9,12 @@
 void rev_string(char *s)
 {
 	int len, stop, size, hold;
-	char keep;
-	
-	keep = *s;
 
 	for (len = 0; len < 1000; len++)
 	{
 		if (*s == '\0')
 		{
-			s = "";
+			*s = "";
 			break;
 		}
 
@@ -30,16 +27,34 @@ void rev_string(char *s)
 			{
 				if (size == 0)
 				{
-					hold = keep[0];
+					hold = *s;
 				}
 				else
 				{
-					hold = keep[size];
+					hold = *(s + size);
 				}
-				s[size] = hold;
+				_putchar(hold);
 				size--;
 			}
+			_putchar('\n');
 			break;
 		}
 	}
+}
+
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s[10] = "My School";
+
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
+    return (0);
 }
