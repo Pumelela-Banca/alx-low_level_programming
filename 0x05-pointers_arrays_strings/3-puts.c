@@ -14,16 +14,21 @@ void _puts(char *str)
 
 	for (len = 0; len < 1000000; len++)
 	{
-		if (len == 0)
+		if (len == 0 && stop =='\0')
 		{
 			stop = *str;
+			_putchar('\n');
+			break;
 		}
 		if (stop == '\0')
 		{
 			_putchar('\n');
 			break;
 		}
-		stop = *(str + len);
-		_putchar(stop);
+		else if (len > 0)
+		{
+			stop = *(str + len);
+			_putchar(stop);
+		}
 	}
 }
