@@ -18,7 +18,7 @@ void _puts(char *str)
 		if (stop == '\0')
 		{
 			_putchar('\n');
-			break;
+			len = 1001;
 		}
 		stop = *(str + len);
 		_putchar(stop);
