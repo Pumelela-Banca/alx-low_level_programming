@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * puts2 - prits every other chr
  *
  * @str: str for pointer
