@@ -12,7 +12,7 @@ void _puts(char *str)
 {
 	int len, stop;
 
-	for (len = 0; len < strlen(str); len++)
+	for (len = 0; len < _strlen(str); len++)
 	{
 		if (*str == '\0')
 		{
