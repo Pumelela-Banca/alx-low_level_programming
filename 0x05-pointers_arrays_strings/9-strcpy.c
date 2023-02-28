@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strcpy - copy string
+ * _strcpy - copy string
  *
  * @src : copy this to dest
  * @dest : copy of src
@@ -9,7 +9,7 @@
  * Return : srting value.
  */
 
-char *_strcpy(char *dest, char *src)
+char * _strcpy(char *dest, char *src)
 {
 	int count, copynow;
 
