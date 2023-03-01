@@ -26,7 +26,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[count] = *(src + count);
 	}
-	for ( ; copynow < n; copynow++)
+	for ( ; copynow < count; copynow++)
 	{
 		dest[copynow] = '\0';
 	}
