@@ -12,7 +12,7 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int size;
+	int size, addon;
 
 	char hold;
 
