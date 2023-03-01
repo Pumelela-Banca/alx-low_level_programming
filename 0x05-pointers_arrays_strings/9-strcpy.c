@@ -5,12 +5,12 @@
  *
  * @src : copy this to dest
  * @dest : copy of src
- * 
+ *
  * Description: Return a string coy of src.
- * Return : srting value.
+ * Return : dest string.
  */
 
-char *_strcpy(char *dest, char *src)
+char * _strcpy(char *dest, char *src)
 {
 	int count, copynow;
 
