@@ -22,7 +22,7 @@ char *_strcpy(char *dest, char *src)
 		}
 	}
 	dest[0] = *src;
-	for (copynow = 1; copynow < count && src[copynow] != 0; copynow++)
+	for (copynow = 1; copynow < count && src[copynow] != '\0'; copynow++)
 	{
 		dest[count] = *(src + count);
 	}
