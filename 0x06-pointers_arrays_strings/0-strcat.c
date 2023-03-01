@@ -20,7 +20,7 @@ char *_strcat(char *dest, char *src)
 	for (size = 0; size < 1000; size++)
 	{
 		hold = dest[size];
-		if ( hold == '\0')
+		if (hold == '\0')
 		{
 			break;
 		}
@@ -30,5 +30,5 @@ char *_strcat(char *dest, char *src)
 		dest[size + addon] = src[addon];
 	}
 	dest[size + addon] = '\0';
-	return dest;
+	return (dest);
 }
