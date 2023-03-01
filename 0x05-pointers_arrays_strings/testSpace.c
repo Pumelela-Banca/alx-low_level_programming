@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strcpy - copy string
@@ -21,15 +22,33 @@ char *_strcpy(char *dest, char *src)
 			break;
 		}
 	}
-	dest[0] = *src;
-	for (copynow = 1; copynow < count && *(src + copynow) != '\0'; copynow++)
+    count++;
+	for (copynow = 0; copynow < count && src[copynow] != '\0'; copynow++)
 	{
 		dest[copynow] = *(src + copynow);
 	}
-	count++;
 	for ( ; copynow < count; copynow++)
 	{
 		dest[copynow] = '\0';
 	}
 	return (dest);
+}
+
+
+
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s1[98];
+    char *ptr;
+
+    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+    printf("%s", s1);
+    printf("%s", ptr);
+    return (0);
 }
