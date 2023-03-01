@@ -22,9 +22,13 @@ char *_strcpy(char *dest, char *src)
 		}
 	}
 	dest[0] = *src;
-	for (copynow = 1; copynow < count; copynow++)
+	for (copynow = 1; copynow < count && src[copynow] != 0; copynow++)
 	{
-		dest[0] = *(src + count);
+		dest[count] = *(src + count);
+	}
+	for ( ; copynow < n; copynow++)
+	{
+		dest[copynow] = '\0';
 	}
 	return (dest);
 }
