@@ -32,7 +32,7 @@ int _strcmp(char *s1, char *s2)
 		vals2 = vals2 + look_up(hold);
 		count2++;
 	}
-	return (count1 - count2);
+	return (vals1 - vals2);
 }
 
 /**
