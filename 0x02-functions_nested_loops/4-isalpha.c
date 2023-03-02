@@ -1,7 +1,9 @@
 #include<ctype.h>
 
 /**
- * _isalpha - check the code.
+ * _isalpha - check the code
+ *
+ * @c- integer value
  *
  * Return:0 or 1.
  */
