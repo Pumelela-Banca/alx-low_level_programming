@@ -2,7 +2,7 @@
 
 /**
  * _strcmp- compare two strings
- * 
+ *
  * Description: Strings to be compared using _strcmp.
  * @s1: first string
  * @s2: second string
@@ -37,7 +37,7 @@ int _strcmp(char *s1, char *s2)
 
 /**
  * look_up- look up ascii VALUE for char
- * 
+ *
  * Description: character to ascii look up.
  * @c : char to be looked at.
  *
@@ -47,8 +47,8 @@ int _strcmp(char *s1, char *s2)
 int look_up(char c)
 {
 	int ho;
-	char names[91] = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHI"
-			"JKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz";
+	char names[91] = "!\"#$%&'()*+,-."
+		"/0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz";
 
 	for (ho = 0; ho < 91; ho++)
 	{
@@ -58,5 +58,5 @@ int look_up(char c)
 		}
 		ho++;
 	}
-    return (ho + 33);
+	return (ho + 33);
 }
