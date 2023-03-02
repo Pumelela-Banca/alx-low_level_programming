@@ -14,8 +14,6 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int addon;
 
-	char hold;
-	
 	for (addon = 0; addon < n && src[addon] != '\0'; addon++)
 	{
 		dest[addon] = src[addon];
