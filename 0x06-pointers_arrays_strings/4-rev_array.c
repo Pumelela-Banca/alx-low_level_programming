@@ -20,7 +20,7 @@ void reverse_array(int *a, int n)
 		hold[limit] = a[limit];
 	}
 	bottom = 0;
-	while(limit > -1)
+	while (limit > -1)
 	{
 		a[limit] = hold[bottom];
 		limit--;
