@@ -11,4 +11,6 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	
+    int count1, count2, count;
+
+    for (count = 0; s1count1 )

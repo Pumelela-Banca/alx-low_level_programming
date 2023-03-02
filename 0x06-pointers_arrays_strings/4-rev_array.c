@@ -13,17 +13,18 @@ void reverse_array(int *a, int n)
 {
 	int limit, bottom;
 
-	char hold[1000];
+	int hold[1000];
 
 	for (limit = 0; limit < n; limit++)
 	{
-		if (a[limit] == '\0')
+		hold[limit] = a[limit];
+		if (limit == n)
 		{
 			break;
 		}
-		hold[limit] = a[limit];
 	}
 	bottom = 0;
+	limit--;
 	while (limit > -1)
 	{
 		a[bottom] = hold[limit];
