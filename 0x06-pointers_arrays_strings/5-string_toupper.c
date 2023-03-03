@@ -8,9 +8,9 @@
  * Return: char *string of upper case letters
  */
 
-char *string_topper(char *str)
+char *string_topper(char *s)
 {
-	char big[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	/*char big[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char small[] = "abcdefghijklmnopqrstuvwxyz";
 	int sma, bi;
 
@@ -25,5 +25,14 @@ char *string_topper(char *str)
 			}
 		}
 	}
-	return (str);
+	return (str);*/
+	int i;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = s[i] - 32;
+		}
+	}
+	return (s)
 }
