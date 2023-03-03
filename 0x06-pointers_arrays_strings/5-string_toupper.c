@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * string_topper - Turn all characters into upper case
+ * string_toupper - Turn all characters into upper case
  *
  * @s: letters  to be turned into upper case
  *
@@ -25,5 +25,5 @@ char *string_toupper(char *s)
 			}
 		}
 	}
-	return (s);
+	return (s);	
 }

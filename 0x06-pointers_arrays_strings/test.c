@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "_putchar.c"
+//#include "_putchar.c"
 #include "5-string_toupper.c"
 
 char *string_toupper(char *s);
@@ -11,5 +11,5 @@ void main(void)
   //   v++;
   //}
 
-  printf("%c", string_toupper("abcdefghijklmnopqrstuvwxyz"));  
+  printf("%s", string_toupper("abcdefghijklmnopqrstuvwxyz"));  
 }
