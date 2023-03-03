@@ -11,7 +11,9 @@
 char *cap_string(char *s)
 {
 	int dimen1, dimen2;
-	char separators[] = {',', '\t', '.', ';', '!', '?', '"', '\n', '(', ')', '{', '}', ' '};
+	char separ[] = {',', '\t', '.', ';', '!', 
+		'?', '"', '\n', '(', ')', '{', '}', ' '};
+
 	for (dimen1 = 0; s[dimen1] != '\0'; dimen1++)
 	{
 		if (dimen1 == 0 && s[dimen1] >= 'a' && s[dimen1])
@@ -20,10 +22,12 @@ char *cap_string(char *s)
 		}
 		for (dimen2 = 0; dimen2 < 13; dimen2++)
 		{
-			if (s[dimen1] == separators[dimen2])
+			if (s[dimen1] == separ[dimen2])
 					{
 						if (s[dimen1 + 1] >= 'a' && s[dimen1 + 1] <= 'z')
+						{
 							s[dimen1 + 1] -= 32;
+						}
 					}
 		}
 	}
