@@ -3,13 +3,11 @@
 
 void main(void)
 {
-    int ho, index;
-    char names[76] = "0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        "[\\]^_`abcdefghijklmnopqrstuvwxyz";
-
-    for (ho = 33; ho < 123; ho++)
-    {
-        _putchar(ho);
-        //_putchar(index +  48);
-    }
+  for (int v = 33; v < 123; v)
+  {
+    _putchar(v);
+    v++;
+  }
+  
+  
 }
