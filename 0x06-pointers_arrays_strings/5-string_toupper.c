@@ -8,22 +8,22 @@
  * Return: char *string of upper case letters
  */
 
-char *string_topper(char *src)
+char *string_topper(char *str)
 {
 	char big[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char small[] = "abcdefghijklmnopqrstuvwxyz";
 	int sma, bi;
 
-	for (sma = 0; src[sma] != '\0'; sma++)
+	for (sma = 0; str[sma] != '\0'; sma++)
 	{
 		for (bi = 0; bi < 26; bi++)
 		{
-			if (src[sma] == small[bi])
+			if (str[sma] == small[bi])
 			{
-				src[sma] = big[bi];
+				str[sma] = big[bi];
 				break;
 			}
 		}
 	}
-	return (src);
+	return (str);
 }
