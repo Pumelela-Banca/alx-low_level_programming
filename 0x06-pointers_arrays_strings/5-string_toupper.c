@@ -8,7 +8,7 @@
  * Return: char *string of upper case letters
  */
 
-char *string_topper(char *str)
+char *string_topper(char *)
 {
 	char big[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char small[] = "abcdefghijklmnopqrstuvwxyz";
