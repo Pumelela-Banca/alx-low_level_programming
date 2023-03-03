@@ -11,5 +11,5 @@ void main(void)
   //   v++;
   //}
 
-  printf("%s", string_toupper("abcdefghijklmnopqrstuvwxyz"));  
+  printf("%c", string_toupper("abcdefghijklmnopqrstuvwxyz"));  
 }
