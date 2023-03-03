@@ -22,7 +22,7 @@ char *cap_string(char *s)
 		}
 		for (dimen2 = 0; dimen2 < 13; dimen2++)
 		{
-			if (s[dimen1] == separ[dimen2] && s[dimen1 + 1] >= 'a' 
+			if (s[dimen1] == separ[dimen2] && s[dimen1 + 1] >= 'a'
 					&& s[dimen1 + 1] <= 'z')
 				s[dimen1 + 1] -= 32;
 		}
