@@ -2,6 +2,7 @@
 #include "_putchar.c"
 #include "5-string_toupper.c"
 
+char *string_toupper(char *s);
 void main(void)
 {
   // for (int v = 33; v < 123; v)
@@ -10,7 +11,5 @@ void main(void)
   //   v++;
   //}
 
-  printf("%s", string_toupper("abcdefghijklmnopqrstuvwxyz"));
-  
-  
+  printf("%s", string_toupper("abcdefghijklmnopqrstuvwxyz"));  
 }

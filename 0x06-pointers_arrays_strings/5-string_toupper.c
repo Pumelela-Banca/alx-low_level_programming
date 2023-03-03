@@ -3,12 +3,12 @@
 /**
  * string_topper - Turn all characters into upper case
  *
- * @char s: letters  to be turned into upper case
+ * @s: letters  to be turned into upper case
  *
  * Return: char *string of upper case letters
  */
 
-char *string_topper(char *s)
+char *string_toupper(char *s)
 {
 	char big[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char small[] = "abcdefghijklmnopqrstuvwxyz";
@@ -25,6 +25,5 @@ char *string_topper(char *s)
 			}
 		}
 	}
-	return (s);
-	
+	return (s);	
 }
