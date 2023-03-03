@@ -11,7 +11,7 @@
 char *cap_string(char *s)
 {
 	int dimen1, dimen2;
-	char separ[] = {',', '\t', '.', ';', '!', 
+	char separ[] = {',', '\t', '.', ';', '!',
 		'?', '"', '\n', '(', ')', '{', '}', ' '};
 
 	for (dimen1 = 0; s[dimen1] != '\0'; dimen1++)
