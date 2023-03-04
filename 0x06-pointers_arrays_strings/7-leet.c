@@ -11,7 +11,7 @@
 char *leet(char *na)
 {
 	int i, c;
-	int nums[] = {4, 3, 0, 7, 1};
+	int nums[] = {'4', '3', '0', '7', '1'};
 	char smll[] = {'a', 'e', 'o', 't', 'l'};
 	char cpl[] = {'A', 'E', 'O', 'T', 'L'};
 
