@@ -3,7 +3,7 @@
 /**
  * leet - encode characters
  *
- * char *: string to be used
+ * @na: string to be used
  *
  * Return: Char string.
  */
