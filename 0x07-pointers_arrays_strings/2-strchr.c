@@ -12,24 +12,11 @@
 
 char *_strchr(char *s, char c)
 {
-        int posi, start, cou;
-        char *pau = "";
-	
-	posi = 0;
-	cou = 0;
-
-	while (s[posi] != '\0')
+	while (*s != '\0')
         {
-                if (s[posi] == c)
-                {
-                        for (start = posi; s[start] != '\0'; start++)
-                        {
-                                pau[cou] = s[start];
-                                cou++;
-                        }
-                        return (pau);
-                }
-                posi++;
+                if (c == '\0')
+			return (s);
+		s++;
         }
         return (NULL);
 }
