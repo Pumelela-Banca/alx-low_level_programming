@@ -14,11 +14,12 @@ char *_strchr(char *s, char c)
 {
         int posi, start, cou;
         char *pau;
+	
+	pau = s;
+	posi = 0;
+	cou = 0;
 
-        posi = 0;
-        cou = 0;
-
-        while (s[posi] != '\0')
+	while (s[posi] != '\0')
         {
                 if (s[posi] == c)
                 {
