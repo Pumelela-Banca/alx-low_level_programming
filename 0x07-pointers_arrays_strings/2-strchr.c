@@ -14,6 +14,7 @@ char *_strchr(char *s, char c)
 {
 	int posi, start, cou;
 	char *pau;
+
 	pau = s;
 
 	posi = 0;
