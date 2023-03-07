@@ -13,9 +13,10 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, c, posi1;
-	char *new;
+	char *new, *p;
 
 	new = "";
+	p = NULL;
 
 	posi1 = 100000;
 
