@@ -11,11 +11,7 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i, c, posi1;
-	char *new, *x;
-
-	new = "";
-	x = NULL;
+	int i, c;
 
 	posi1 = 100000;
 
@@ -23,18 +19,9 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (c =  0; s[c] != '\0'; c++)
 		{
-			if (accept[i] == s[c] && posi1 > c)
-				posi1 = c;
+			if (accept[i] == s[c])
+				return (s + i)
 		}
 	}
-	if (posi1 < 100000)
-	{
-		for (i = 0; s[posi1] != '\0'; i++)
-		{
-			new[i] = s[posi1];
-			posi1++;
-		}
-		return (new);
-	}
-	return (x);
+	return ('\0');
 }
