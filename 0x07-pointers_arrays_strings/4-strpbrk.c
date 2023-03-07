@@ -13,8 +13,6 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i, c;
 
-	posi1 = 100000;
-
 	for (i = 0; accept[i] != '\0'; i++)
 	{
 		for (c =  0; s[c] != '\0'; c++)
