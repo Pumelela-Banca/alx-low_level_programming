@@ -12,9 +12,10 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, c, posi1;
-	char *new;
+	char *new, *x;
 
 	new = "";
+	x = NULL;
 
 	posi1 = 100000;
 
@@ -35,5 +36,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		return (new);
 	}
-	return ('\0');
+	return (x);
 }

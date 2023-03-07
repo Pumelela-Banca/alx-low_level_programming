@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stddef.h>
 
 
 /**
@@ -38,7 +39,7 @@ char *_strpbrk(char *s, char *accept)
 		}
 		return (new);
 	}
-	return ('\0');
+	return (NULL);
 }
 
 /**
@@ -48,7 +49,7 @@ char *_strpbrk(char *s, char *accept)
  */
 int main(void)
 {
-    char *s = "hello, world";
+    char *s = "2222l";
     char *f = "world";
     char *t;
 
