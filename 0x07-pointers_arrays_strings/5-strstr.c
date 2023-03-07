@@ -18,9 +18,10 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for (c = 0; needle[c] != '\0'; c++)
 		{
-			if (needle[c] == haystack[i])
+			if (needle[c] == haystack[i] 
+					&& needle[c + 1] == haystack[i + 1])
 			{
-				return (needle);
+				return (haystack + i);
 			}
 		}
 	}
