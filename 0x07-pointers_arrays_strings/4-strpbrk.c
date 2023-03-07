@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "main.h"
 
 /**
@@ -13,10 +12,9 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, c, posi1;
-	char *new, *p;
+	char *new;
 
 	new = "";
-	p = NULL;
 
 	posi1 = 100000;
 
@@ -37,5 +35,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		return (new);
 	}
-	return (NULL);
+	return ('\0');
 }
