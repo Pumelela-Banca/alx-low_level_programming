@@ -4,7 +4,7 @@
  * _strpbrk- search string for any set of bytes
  *
  * @s: searchfrom this string
- * @acceppt: search  these words
+ * @accept: search  these words
  *
  * Return: string containing all found chars
  */
