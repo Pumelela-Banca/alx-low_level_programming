@@ -19,5 +19,5 @@ int _sqrt_recursion(int n);
 
 int _strlen_recursion(char *s);
 
-
+int wildcmp(char *s1, char *s2);
 #endif
