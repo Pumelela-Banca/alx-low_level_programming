@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * sqr_count - count if number is natural square root
+ * sqrt_count - count if number is natural square root
  *
  * @num: subtract from number until 0.
  * @count: number to subtract
@@ -11,15 +11,16 @@
 
 int sqrt_count(int num, int count)
 {
-        if (num <= 0)
-        {
-                return (0);
-        }
-        else
-        {
-                return (1 + sqrt_count(num - count, count + 2));
-        }
+	if (num <= 0)
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + sqrt_count(num - count, count + 2));
+	}
 }
+
 
 /**
  * _sqrt_recursion - return the natural square root of a number
@@ -28,8 +29,6 @@ int sqrt_count(int num, int count)
  *
  * Return: the natural square root or -1 if not present.
  */
-
-int sqrt_count(int num, int count);
 
 int _sqrt_recursion(int n)
 {
