@@ -5,24 +5,23 @@
  *
  * @count: number to compare multiples
  * @down: come down from num to up
- * up: go from 1 to count.
  *
  * Return: 1 for prime 0 for false.
  */
 
-int prm(int count, int down, int up)
+int prm(int count, int down)
 {
-	if (down * up == count)
-	{
-		return (1);
-	}
-	else if (down == up)
+	if (down == 1)
 	{
 		return (0);
 	}
+	else if (count % down == 0)
+	{
+		return (1);
+	}
 	else
 	{
-		return (prm(count, down - 1, up + 1));
+		return (prm(count, down - 1));
 	}
 }
 
@@ -36,9 +35,9 @@ int prm(int count, int down, int up)
 
 int is_prime_number(int n)
 {
-	if (n == 1)
+	if (n == 1 || n < 0)
 	{
 		return (0);
 	}
-	return (prm(n, n - 1,  1));
+	return (prm(n, n - 1));
 }
