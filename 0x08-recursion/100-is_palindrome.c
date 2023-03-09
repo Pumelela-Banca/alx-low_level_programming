@@ -3,9 +3,9 @@
 /**
  * compc - compare two characters
  *
- * @s - string
- * @down - go down from word
- * @up -  go up in word
+ * @s: string
+ * @down: go down from word
+ * @up:  go up in word
  *
  * Return: 1 for true  0 for false
  */
@@ -29,7 +29,7 @@ int compc(char *s, int down, int up)
 /**
  * _strlen_recursion - get len of string
  *
- * @s - string to measure
+ * @s: string to measure
  * Return : size of string
  */
 
@@ -50,7 +50,7 @@ int _strlen_recursion(char *s)
  *
  * is_palindrome - check if string is a palindrome
  *
- * @s - string
+ * @s: string
  *
  * Return: 0 or 1
  */
