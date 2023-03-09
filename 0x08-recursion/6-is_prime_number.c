@@ -13,11 +13,11 @@ int prm(int count, int down)
 {
 	if (down == 1)
 	{
-		return (0);
+		return (1);
 	}
 	else if (count % down == 0)
 	{
-		return (1);
+		return (0);
 	}
 	else
 	{
