@@ -47,7 +47,6 @@ int _strlen_recursion(char *s)
 }
 
 /**
- *
  * is_palindrome - check if string is a palindrome
  *
  * @s: string
