@@ -30,7 +30,8 @@ int compc(char *s, int down, int up)
  * _strlen_recursion - get len of string
  *
  * @s: string to measure
- * Return : size of string
+ *
+ * Return: size of string as int or 0
  */
 
 int _strlen_recursion(char *s)
