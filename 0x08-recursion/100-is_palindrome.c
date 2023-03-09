@@ -12,7 +12,7 @@
 
 int compc(char *s, int down, int up)
 {
-	if (s[down] == s[up])
+	if (s[up] == '\0')
 	{
 		return (1);
 	}
@@ -27,13 +27,24 @@ int compc(char *s, int down, int up)
 }
 
 /**
- * _strlen_recursion - get len
+ * _strlen_recursion - get len of string
  *
- * @s - string
- * Return : int
+ * @s - string to measure
+ * Return : size of string
  */
 
-int _strlen_recursion(char *s);
+int _strlen_recursion(char *s)
+{
+	if (s[0] == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + _strlen_recursion((s + 1)));
+	}
+	return (0);
+}
 
 /**
  *
@@ -53,5 +64,5 @@ int is_palindrome(char *s)
 	if (s[0] == '\0')
 		return (1);
 
-	return (compc(s, strln, 0));
+	return (compc(s, strln - 1, 0));
 }
