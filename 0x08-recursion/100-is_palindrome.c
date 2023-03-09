@@ -27,6 +27,15 @@ int compc(char *s, int down, int up)
 }
 
 /**
+ * _strlen_recursion - get len
+ *
+ * @s - string
+ * Return : int
+ */
+
+int _strlen_recursion(char *s);
+
+/**
  *
  * is_palindrome - check if string is a palindrome
  *
