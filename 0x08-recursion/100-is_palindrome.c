@@ -22,7 +22,7 @@ int compc(char *s, int down, int up)
 	}
 	else
 	{
-		return (compc(*s, down - 1, up + 1));
+		return (compc(s, down - 1, up + 1));
 	}
 }
 
@@ -44,5 +44,5 @@ int is_palindrome(char *s)
 	if (s[0] == '\0')
 		return (1);
 
-	compc(s, strln, 0);
+	return (compc(s, strln, 0));
 }
