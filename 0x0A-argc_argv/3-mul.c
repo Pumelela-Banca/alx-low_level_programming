@@ -4,7 +4,7 @@
  * main - entry point to multiplication function
  *
  * @argc: len of arguments array
- * @argv: array  with arguments
+ * @argv: array with arguments
  *
  * Return: 1 always
  */
