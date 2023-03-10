@@ -15,14 +15,14 @@ int main(int argc, char *argv[])
 	int sum, top;
 
 	sum = 0;
-	top = 0;
+	top = 1;
 
 	if (argc < 1)
 		return (0);
 
 	while (top < argc)
 	{
-		if (!_isdigit(argv[top]))
+		if (atoi(argv[top]) == 0)
 		{
 			printf("Error\n");
 			return (1);
@@ -30,6 +30,6 @@ int main(int argc, char *argv[])
 		sum += atoi(argv[top]);
 		top++;
 	}
-	printf("%d", sum);
+	printf("%d\n", sum);
 	return (1);
 }
