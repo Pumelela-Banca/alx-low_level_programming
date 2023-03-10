@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - entry point to multiplication function
+ * main - multiply two numbers given
  *
  * @argc: len of arguments array
  * @argv: array with arguments
  *
- * Return: 1 always
+ * Return: 1 for safe run
  */
 
 int main(int argc, char *argv[])
@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (1);
 }
