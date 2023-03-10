@@ -1,6 +1,5 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
-#include <cctype.h>
 
 /**
  * main - entry point to add function
