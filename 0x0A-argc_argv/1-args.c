@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - print number of args supplied
@@ -11,6 +11,13 @@
 
 int main(int argc, char *argv[] __attribute__((unused)))
 {
-	printf("%d\n", argc);
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		continue;
+	}
+
+	printf("%d\n", i - 1);
 	return (1);
 }
