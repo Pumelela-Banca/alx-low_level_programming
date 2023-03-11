@@ -7,5 +7,6 @@ x = glob.glob("*.o")
 rr = ""
 for i in x:
     rr += i + " "
-os.popen(f"ar rc libmy.a {rr}")
+print(rr)
+#os.popen(f"ar rc libmy.a {rr}")
 print("done")
