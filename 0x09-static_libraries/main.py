@@ -8,5 +8,5 @@ rr = ""
 for i in x:
     rr += i + " "
 print(rr)
-#os.popen(f"ar rc libmy.a {rr}")
+os.popen(f"ar rc libmy.a _putchar.o {rr}")
 print("done")
