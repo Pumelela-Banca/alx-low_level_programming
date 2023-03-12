@@ -2,7 +2,7 @@
 
 import os, glob
 
-x = glob.glob("*.o")
+x = glob.glob("*.c")
 
 rr = ""
 for i in x:
