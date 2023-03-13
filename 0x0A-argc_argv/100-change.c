@@ -59,10 +59,10 @@ int main(int argc, char *argv[])
 	}
 	if (atoi(argv[1]) < 0)
 	{
-		printf("0");
+		printf("0\n");
 		return (1);
 	}
 	val = change(atoi(argv[1]));
-	printf("%d", val);
+	printf("%d\n", val);
 	return (1);
 }
