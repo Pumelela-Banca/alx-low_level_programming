@@ -3,7 +3,7 @@
 /**
  * change - giv change back
  *
- * @amount: amount to be brocken
+ * @c: amount to be brocken
  *
  * Return: sum of coins
  */
@@ -18,7 +18,7 @@ int change(int c)
 	{
 		if (c >= 25)
 		{
-			return ( 1 + change(c - 25));
+			return (1 + change(c - 25));
 		}
 		else if (c >= 10)
 		{
