@@ -13,7 +13,7 @@ char *create_array(unsigned int size, char c)
 	unsigned int start;
 	char *names;
 
-	if (size == 0)
+		if (size == 0 || atoi(c) != 0)
 	{
 		return ('\0');
 	}
