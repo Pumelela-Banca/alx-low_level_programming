@@ -11,9 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int start;
-	char *names, *pc;
-
-	pc = &c;
+	char *names;
 
 	if (size == 0)
 	{
@@ -22,9 +20,9 @@ char *create_array(unsigned int size, char c)
 
 	names = malloc(sizeof(*names) * size);
 
-	for (start = 0; size == start; start++)
+	for (start = 0; start < size; start++)
 	{
-		names[start] = *pc;
+		names[start] = c;
 	}
 	return (names);
 }
