@@ -12,11 +12,18 @@ char *_strdup(char *str)
 {
 	char *send;
 
-	int sizel, two;
+	int sizel, two, tree;
+
+	tree = 1;
 
 	for (sizel = 0; str[sizel] != '\0'; sizel++)
+	{
+		tree++;
+		if (str[sizel] == '\0')
+			break;
+	}
 
-	send = malloc(sizeof(*send) * sizel);
+	send = malloc(sizeof(*send) * tree);
 
 	for (two = 0; str[two] != '\0'; two++)
 	{
