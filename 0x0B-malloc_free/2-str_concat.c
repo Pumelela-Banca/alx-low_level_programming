@@ -10,16 +10,14 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int size1, size2, hold, start, next, ss1, ss2;
+	int size1, size2, hold, start, next;
 	char *new;
 
 	next = 0;
-	ss1 = 1;
-	ss2 = 1;
 	for (size1 = 0; s1[size1] != '\0'; size1++)
-		ss1++;
+		continue;
 	for (size2 = 0; s2[size2] != '\0'; size2++)
-		ss2++;
+		continue;
 
 	if (size1 == 1 && size2 == 1)
 	{
