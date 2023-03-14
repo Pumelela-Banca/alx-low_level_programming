@@ -25,7 +25,7 @@ char *_strdup(char *str)
 
 	send = malloc(sizeof(*send) * tree);
 
-	for (two = 0; str[two] != '\0'; two++)
+	for (two = 0; str[two] == '\0'; two++)
 	{
 		send[two] = str[two];
 	}
