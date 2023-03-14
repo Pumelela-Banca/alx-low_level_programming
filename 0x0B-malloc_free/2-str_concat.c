@@ -14,12 +14,12 @@ char *str_concat(char *s1, char *s2)
 	char *new;
 
 	next = 0;
-	for (size1 = 0; s1[size1] != '\0'; size1++)
+	for (size1 = 1; s1[size1] != '\0'; size1++)
 		continue;
-	for (size2 = 0; s2[size2] != '\0'; size2++)
+	for (size2 = 1; s2[size2] != '\0'; size2++)
 		continue;
 
-	if (size1 == 0 && size2 == 0)
+	if (size1 == 1 && size2 == 1)
 	{
 		return ('\0');
 	}
