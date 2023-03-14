@@ -20,7 +20,7 @@ char *_strdup(char *str)
 			break;
 	}
 
-	send = malloc(sizeof(*send) * sizel);
+	send = malloc(sizeof(*send) * sizel - 1);
 
 	for (two = 0; str[two] != '\0'; two++)
 	{
