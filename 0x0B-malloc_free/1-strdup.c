@@ -15,10 +15,6 @@ char *_strdup(char *str)
 	int sizel, two;
 
 	for (sizel = 0; str[sizel] != '\0'; sizel++)
-	{
-		if (str[sizel] == '\0')
-			break;
-	}
 
 	send = malloc(sizeof(*send) * sizel);
 
