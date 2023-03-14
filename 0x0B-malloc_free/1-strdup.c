@@ -16,7 +16,7 @@ char *_strdup(char *str)
 
 	tree = 1;
 
-	for (sizel = 0; str[sizel] != '\0'; sizel++)
+	for (sizel = 0; str[sizel] == '\0'; sizel++)
 	{
 		tree++;
 		if (str[sizel] == '\0')

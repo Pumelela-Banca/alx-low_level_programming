@@ -30,11 +30,11 @@ char *str_concat(char *s1, char *s2)
 	new = malloc(sizeof(*new) * hold);
 	for (start = 0; start < hold; start++)
 	{
-		if (size1 == 0)
+		if (size1 == 0 || s1 == NULL)
 		{
 			new[start] = s2[start];
 		}
-		else if (size2 == 0)
+		else if (size2 == 0 || s2 == NULL)
 		{
 			new[start] = s1[start];
 		}
