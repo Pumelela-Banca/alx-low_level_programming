@@ -19,14 +19,7 @@ char *str_concat(char *s1, char *s2)
 	for (size2 = 0; s2[size2] != '\0'; size2++)
 		continue;
 
-	if (size1 == 1 && size2 == 1)
-	{
-		return ('\0');
-	}
-	else
-	{
-		hold = size1 + size2;
-	}
+	hold = size1 + size2;
 	new = malloc(sizeof(*new) * hold);
 	for (start = 0; start < hold; start++)
 	{
