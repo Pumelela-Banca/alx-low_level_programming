@@ -14,13 +14,13 @@ char *_strdup(char *str)
 
 	int sizel, two;
 
-	for (sizel = 1; str[sizel] != '\0'; sizel++)
+	for (sizel = 0; str[sizel] != '\0'; sizel++)
 	{
 		if (str[sizel] == '\0')
 			break;
 	}
 
-	send = malloc(sizeof(*send) * sizel - 1);
+	send = malloc(sizeof(*send) * sizel);
 
 	for (two = 0; str[two] != '\0'; two++)
 	{
