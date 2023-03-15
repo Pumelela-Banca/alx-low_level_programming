@@ -17,7 +17,11 @@ char *_strdup(char *str)
 	tree = 1;
 
 	if (str == NULL)
-		return (NULL);
+	{
+		send = malloc (sizeof(str));
+		send[0] = NULL;
+		return (send);
+	}
 
 	for (sizel = 0; str[sizel] != '\0'; sizel++)
 	{
