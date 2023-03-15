@@ -3,8 +3,8 @@
 /**
  * free_grid - free memory prviously ooccupied
  *
- * @grid:
- * @height:
+ * @grid: 2d array initialized to 0.
+ * @height: lenght of array inside.
  *
  * Return: Nothing
  */
