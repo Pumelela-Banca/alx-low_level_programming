@@ -21,14 +21,15 @@ void free_grid(int **grid, int height)
 			last++;
 		}
 		last++;
-		for (h = 0; h < height; h++)
+		last *= height;
+		for (i = 0; i < height; i++)
 		{
-			for (i = 0; i < last; i++)
-			{
-				free(grid[h][i]);
-				grid[h][i] = NULL;
-			}
+			free(grid[i]);
+			grid[i] = NULL;
 		}
+		free(grid);
+		grid = NULL;
+		return;
 	}
 
 	for (h = 0; grid[h] != '\0'; h++)
