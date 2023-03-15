@@ -11,11 +11,10 @@
 
 void free_grid(int **grid, int height)
 {
-	int h, last, i;
+	int h, i;
 
 	if (height > 1)
 	{
-		last = 0;
 		/*while (grid[height - 1][last] != '\0')
 		{
 			last++;
