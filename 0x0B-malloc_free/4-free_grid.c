@@ -31,12 +31,14 @@ void free_grid(int **grid, int height)
 		grid = NULL;
 		return;
 	}
-
-	for (h = 0; grid[h] != '\0'; h++)
+	else
 	{
-		free(grid[h]);
-		grid[h] = NULL;
+		for (h = 0; grid[h] != '\0'; h++)
+		{
+			free(grid[h]);
+			grid[h] = NULL;
+		}
+		free(grid);
+		grid = NULL;
 	}
-	free(grid);
-	grid = NULL;
 }
