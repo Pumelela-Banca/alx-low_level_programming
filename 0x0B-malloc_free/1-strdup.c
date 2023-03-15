@@ -26,7 +26,7 @@ char *_strdup(char *str)
 			break;
 	}
 
-	send = malloc(sizeof(char) * tree);
+	send = malloc(sizeof(str) * sizel);
 
 	for (two = 0; str[two] != '\0'; two++)
 	{
