@@ -19,14 +19,14 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	for (sizel = 0; str[sizel] == '\0'; sizel++)
+	for (sizel = 0; str[sizel] != '\0'; sizel++)
 	{
 		tree++;
 		if (str[sizel] == '\0')
 			break;
 	}
 
-	send = malloc(sizeof(str) * sizel);
+	send = malloc(sizeof(str) * tree);
 
 	for (two = 0; str[two] != '\0'; two++)
 	{
