@@ -6,17 +6,17 @@
  * @grid: 2d array initialized to 0.
  * @height: lenght of array inside.
  *
- * Return: Nothing
+ * Return: Nothing void.
  */
 
 void free_grid(int **grid, int height)
 {
-	int width;
+	int h;
 
-	for (width = 0; width < height; width++)
+	for (h = 0; h < height; width++)
 	{
-		free(grid[width]);
-		grid[width] = NULL;
+		free(grid[h]);
+		grid[h] = NULL;
 	}
 	free(grid);
 	grid = NULL;
