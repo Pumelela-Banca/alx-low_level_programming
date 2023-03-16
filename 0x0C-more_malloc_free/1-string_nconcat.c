@@ -18,7 +18,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL && n > 0)
 	{
 		i = _strlen_recursion(s2) - n + 1;
-		sum = malloc(i * sizeof(sum));
+		sum = malloc(i);
 		for (z = 0; z < n; z++)
 		{
 			sum[z] = s2[z];
@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else if (s1 == NULL)
 	{
 		i = _strlen_recursion(s2) + 1;
-                sum = malloc(i * sizeof(sum));
+                sum = malloc(i);
                 for (z = 0; s2[z] == '\0'; z++)
                 {
                         sum[z] = s2[z];
@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else if (s2 == NULL)
 	{
 		i = _strlen_recursion(s1) + 1;
-		sum = malloc(i * sizeof(sum));
+		sum = malloc(i);
 		for (z = 0; s1[z] == '\0'; z++)
 		{
 			sum[z] = s2[z];
