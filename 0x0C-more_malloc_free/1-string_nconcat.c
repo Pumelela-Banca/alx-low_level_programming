@@ -14,12 +14,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 
-
 	if (s1 == NULL)
-	{
 		s1 = "";
-		return (strln(s1, s2, n));
-	}
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -55,6 +51,9 @@ char *strln(char *s1, char *s2, unsigned int n)
 
 	i = _strlen_recursion(s1) + n;
 	new = malloc(i + 1);
+
+	if (new == NULL)
+		return (NULL);
 	for (z = 0; s1[z] != '\0'; z++)
 	{
 		new[z] =  s1[z];
