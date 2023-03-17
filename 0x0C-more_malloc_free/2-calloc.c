@@ -4,7 +4,7 @@
  * _calloc - allocate memory of array
  *
  * @nmemb: number of elements
- * size: bytes 
+ * @size: bytes 
  *
  * Return: void
  */
@@ -17,7 +17,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if ( nmemb == 0 || size == 0)
 		return (0);
 
-	ptr = malloc(nmemb * size + 1);
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
