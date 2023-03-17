@@ -50,7 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  * strln - same as string_nconcat but for s1 and s2 positive
  * and n positive.
  * @s1: first string
- * s2: second string
+ * @s2: second string
  * @n: number of bytes from s2
  *
  * Return: string containing concatenation.
