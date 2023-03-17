@@ -12,10 +12,22 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
+	char *new;
+	unsigned int i, z;
 
 	if (s1 == NULL)
+	{
 		s1 = "";
+		i = _strlen_recursion(s1) + n;
+		new = malloc(i + 1);
+		if (new == NULL)
+			return (NULL);
+		for (z = 0; z < n; z++)
+		{
+			new[z] = s2[z];
+		}
+		new[z + 1] = '\0';
+	}
 	if (s2 == NULL)
 	{
 		s2 = "";
