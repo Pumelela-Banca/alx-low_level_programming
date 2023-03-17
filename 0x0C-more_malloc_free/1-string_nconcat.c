@@ -12,51 +12,24 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *sum;
-	unsigned int i, z;
+	unsigned int i;
 
-	if (s1 == NULL && n > 0)
-	{
-		i = _strlen_recursion(s2) + 1;
-		sum = malloc(i);
-		for (z = 0; z < n; z++)
-		{
-			sum[z] = s2[z];
-		}
-		sum[z] = '\0';
-	}
-	else if (s1 == NULL)
-	{
-		i = _strlen_recursion(s2) + 1;
-                sum = malloc(i);
-                for (z = 0; s2[z] == '\0'; z++)
-                {
-                        sum[z] = s2[z];
-                }
-	}
-	else if (s2 == NULL)
-	{
-		i = _strlen_recursion(s1) + 1;
-		sum = malloc(i);
-		for (z = 0; s1[z] == '\0'; z++)
-		{
-			sum[z] = s2[z];
-		}
-	}
-	else
-	{
-		i = _strlen_recursion(s2);
-		if (n < i)
-		{
-			return (strln(s1, s2, n));
-		}
-		else if (n > i)
-		{
-			return (strln(s1, s2, i));
-		}
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	i = _strlen_recursion(s2);
+	if (n < i)
+	{
+		return (strln(s1, s2, n));
 	}
-	return (sum);
+	else if (n > i)
+	{
+		return (strln(s1, s2, i));
+	}
+	return (strln(s1, s2, n));
 }
 
 /**
