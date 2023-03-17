@@ -20,6 +20,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
+
+
 	i = _strlen_recursion(s2);
 	if (n < i)
 	{
@@ -48,7 +50,7 @@ char *strln(char *s1, char *s2, unsigned int n)
 	char *new;
 
 	i = _strlen_recursion(s1) + n;
-	new = malloc(i + 1);
+	new = malloc(i * sizeof(new)  + 1);
 	for (z = 0; s1[z] != '\0'; z++)
 	{
 		new[z] =  s1[z];
