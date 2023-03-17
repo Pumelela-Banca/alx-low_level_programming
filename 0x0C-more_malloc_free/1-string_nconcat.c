@@ -17,7 +17,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL && n > 0)
 	{
-		i = _strlen_recursion(s2) - n + 1;
+		i = _strlen_recursion(s2) + 1;
 		sum = malloc(i);
 		for (z = 0; z < n; z++)
 		{
