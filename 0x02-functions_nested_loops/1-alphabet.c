@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
 * print_alphabet - Print string using loop.
 *
@@ -7,7 +9,7 @@
 void print_alphabet(void)
 {
 	int a;
-	
+
 	for (a =  97; a < 123; a++)
 	{
 		_putchar(a);
