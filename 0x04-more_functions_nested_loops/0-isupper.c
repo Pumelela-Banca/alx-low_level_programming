@@ -8,7 +8,7 @@
  * Return: 0 or  1.
  */
 
-int _isupper(char c)
+int _isupper(int c)
 {
 	int a;
 
