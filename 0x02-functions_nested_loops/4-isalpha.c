@@ -3,7 +3,7 @@
 /**
  * _isalpha - check the code
  *
- * @c- integer value
+ * @c: integer value
  *
  * Return:0 or 1.
  */
