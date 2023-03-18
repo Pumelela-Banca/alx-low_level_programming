@@ -34,14 +34,14 @@ void times_table(void)
 			{
 				c = z % 10;
                                 m = z - c;
-                                _putchar('0' + m);
-                                _putchar('0' + c);
+				_putchar('0' + m);
+				_putchar('0' + c);
 				_putchar('\n');
 			}
 			else
 			{
 				_putchar('0' + z);
-                                _putchar('\n');
+				_putchar('\n');
 			}
 
 		}
