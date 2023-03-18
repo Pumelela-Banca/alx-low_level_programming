@@ -4,6 +4,6 @@
 void main(void)
 {
     char a, b;
-    printf("%d, %d", 'z' , 'a');
+    printf("%d, %d", 'A' , 'Z');
 
 }
