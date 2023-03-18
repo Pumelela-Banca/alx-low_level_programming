@@ -2,7 +2,6 @@
 
 /**
  * main - check the code.
- * @c: inter value 
  * Return: Always 0.
  */
 int main(void)
