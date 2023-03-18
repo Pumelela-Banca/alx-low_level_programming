@@ -2,7 +2,7 @@
 
 /**
  * _islower - check the code.
- * @c: inter value 
+ * @c: inter value
  * Return:0 or 1.
  */
 
