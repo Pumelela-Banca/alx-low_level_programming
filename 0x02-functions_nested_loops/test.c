@@ -3,7 +3,7 @@
 
 void main(void)
 {
-    char a, b;
-    printf("%d, %d", 'A' , 'Z');
+    for (int c = 50; c < 200; c++)
+        printf("%c-%d\n", c, c);
 
 }
