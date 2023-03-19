@@ -26,7 +26,7 @@ void more_numbers(void)
 /**
  * pri_in - prints input string
  *
- * @i - string to be printed
+ * @i: string to be printed
  *
  * Return: Void
  */
@@ -36,7 +36,7 @@ void pri_in(int i)
 	int z, c, k, l;
 	int si[2];
 
-	c = 1;
+	c = 0;
 	k = i;
 	l = 0;
 
