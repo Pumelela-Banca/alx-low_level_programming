@@ -8,22 +8,25 @@
 
 void more_numbers(void)
 {
-	int a, i;
+	int a, i, z;
 
-	for (a = 48; a < 58; a++)
+	for (z = 0; z < 10; z++)
 	{
-		_putchar(a);
-	}
-	for (i = 10; i < 15; i++)
-	{
-		pri_in(i);
+		for (a = 48; a < 58; a++)
+		{
+			_putchar(a);
+		}
+		for (i = 10; i < 15; i++)
+		{
+			pri_in(i);
+		}
+		_putchar('\n');
 	}
 }
-
 /**
  * pri_in - prints input string
  *
- * @n - string to be printed
+ * @i - string to be printed
  *
  * Return: Void
  */
