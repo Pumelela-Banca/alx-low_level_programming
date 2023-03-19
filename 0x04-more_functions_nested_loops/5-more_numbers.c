@@ -10,23 +10,42 @@ void more_numbers(void)
 {
 	int a, i;
 
-	for (i = 0; i < 10; i++)
+	for (a = 48; a < 58; a++)
 	{
-		for (a = 48; a < 58; a++)
-		{
-			_putchar(a);
-		}
+		_putchar(a);
+	}
+	for (i = 10; i < 15; i++)
+	{
+		pri_in(i);
+	}
+}
 
-		_putchar('0' + 1);
-		_putchar('0' + 0);
-		_putchar('0' + 1);
-		_putchar('0' + 1);
-		_putchar('0' + 1);
-		_putchar('0' + 2);
-		_putchar('0' + 1);
-		_putchar('0' + 3);
-		_putchar('0' + 1);
-		_putchar('0' + 4);
-		_putchar('\n');
+/**
+ * pri_in - prints input string
+ *
+ * @n - string to be printed
+ *
+ * Return: Void
+ */
+
+void pri_in(int i)
+{
+	int z, c, k, l;
+	int si[2];
+
+	c = 1;
+	k = i;
+	l = 0;
+
+	while (k > 9)
+	{
+		k -= 10;
+		l++;
+		si[c] = l;
+	}
+	si[1] = i % 10;
+	for (z = 0; z < 2; z++)
+	{
+		_putchar('0' + si[z]);
 	}
 }
