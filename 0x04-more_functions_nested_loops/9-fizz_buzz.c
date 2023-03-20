@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
@@ -14,21 +14,34 @@ int main(void)
 	{
 		if (a % 3 == 0 && a % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			_putchar('F');
+			_putchar('i');
+			_putchar('z');
+			_putchar('z');
+			_putchar('B');
+			_putchar('u');
+			_putchar('z');
+			_putchar('z');
 		}
 		else if (a % 5 == 0)
 		{
-			printf("Buzz ");
+			_putchar('B');
+			_putchar('u');
+			_putchar('z');
+			_putchar('z');
 		}
 		else if (a % 3 == 0)
 		{
-			printf("Fizz ");
+			_putchar('F');
+			_putchar('i');
+			_putchar('z');
+			_putchar('z');
 		}
 		else
 		{
 			printf("%d ", a);
 		}
 	}
-	printf("\n");
+	_putchar('\n');
 	return(1);
 }
