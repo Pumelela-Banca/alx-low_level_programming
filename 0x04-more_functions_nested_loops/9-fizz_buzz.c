@@ -1,4 +1,4 @@
-#include "main.h"
+#include "_putchar.c"
 
 /**
  * main - entry point
@@ -22,6 +22,7 @@ int main(void)
 			_putchar('u');
 			_putchar('z');
 			_putchar('z');
+			_putchar(' ');
 		}
 		else if (a % 5 == 0)
 		{
@@ -29,6 +30,7 @@ int main(void)
 			_putchar('u');
 			_putchar('z');
 			_putchar('z');
+			_putchar(' ');
 		}
 		else if (a % 3 == 0)
 		{
@@ -36,6 +38,7 @@ int main(void)
 			_putchar('i');
 			_putchar('z');
 			_putchar('z');
+			_putchar(' ');
 		}
 		else
 		{
