@@ -43,6 +43,7 @@ int main(void)
 		else
 		{
 			_putchar('0' + a);
+			_putchar(' ');
 		}
 	}
 	_putchar('\n');
