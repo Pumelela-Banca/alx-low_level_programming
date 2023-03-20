@@ -2,9 +2,11 @@
 
 /**
  * main - entry point
+ * 
+ * Return: Int 
  */
 
-void main(void)
+int main(void)
 {
 	int a;
 
@@ -28,4 +30,5 @@ void main(void)
 		}
 	}
 	printf("\n");
+	return(1);
 }
