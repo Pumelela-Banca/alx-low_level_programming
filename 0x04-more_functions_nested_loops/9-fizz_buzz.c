@@ -39,7 +39,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%d ", a);
+			_putchar('0' + a);
 		}
 	}
 	_putchar('\n');
