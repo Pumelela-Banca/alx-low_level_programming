@@ -7,7 +7,7 @@
  * @array: numbers to loot from
  * @cmp: pointer to function to compare values
  *
- * Return: index where first value is found -1 
+ * Return: index where first value is found -1
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
