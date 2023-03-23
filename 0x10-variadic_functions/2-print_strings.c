@@ -18,9 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 		return;
-
 	va_start(ap, n);
-
 	if (separator == NULL)
 	{
 		for (i = 0; i < n; i++)
@@ -39,22 +37,31 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		for (i = 0; i < (n - 1); i++)
 		{
 			nn = va_arg(ap, char *);
-			if (nn[0] == '\0')
-			{
-				printf("(nil)");
-				printf("%s", separator);
-			}
-			else
-			{
-				printf("%s", nn);
-				printf("%s", separator);
-			}
+			nul_not(nn);
+			printf("%s", separator);
 		}
 		nn = va_arg(ap, char *);
-		if (nn[0] == '\0')
-			printf("(nil)");
-		else
-			printf("%s", va_arg(ap, char *));
+		nul_not(nn);
 	}
 	printf("\n");
+	va_end(ap);
+}
+
+/**
+ * nul_not - prints input strings
+ * @s1: first string
+ *
+ * Returns: void
+ */
+
+void nul_not(char *s1)
+{
+	if (s1[0] == '\0')
+	{
+		printf("(nil)");
+	}
+	else
+	{
+		printf("%s", s1);
+	}
 }
