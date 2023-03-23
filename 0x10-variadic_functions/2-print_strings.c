@@ -39,7 +39,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		for (i = 0; i < (n - 1); i++)
 		{
 			nn = va_arg(ap, char *);
-			if (nn == NULL)
+			if (nn[0] == '\0')
 			{
 				printf("(nil)");
 				printf("%s", separator);
@@ -50,7 +50,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 			}
 		}
-		printf("%s", va_arg(ap, char *));
+		nn = va_arg(ap, char *);
+		if (nn[0] == '\0')
+			printf("(nil)");
+		else
+			printf("%s", va_arg(ap, char *));
 	}
 	printf("\n");
 }
