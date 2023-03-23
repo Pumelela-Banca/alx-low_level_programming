@@ -5,7 +5,6 @@
  * sum_them_all - sums all its parameters
  *
  * @n: number of parameters
- * @...: numbers to sum up
  *
  * Return: sum of all numbers
  */
