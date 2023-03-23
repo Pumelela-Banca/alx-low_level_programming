@@ -25,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			nn = va_arg(ap, char *);
 			if (nn == NULL)
-				printf("(nil)");
+				printf("nil");
 			else
 			{
 				printf("%s", nn);
@@ -58,7 +58,7 @@ void nul_not(char *s1)
 {
 	if (s1[0] == '\0')
 	{
-		printf("(nil)");
+		printf("nil");
 	}
 	else
 	{
