@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * void print_all - print anything
+ * print_all - print anything
  *
  * @format: list of arguments
  *
