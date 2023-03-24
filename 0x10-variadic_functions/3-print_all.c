@@ -13,11 +13,10 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	va_list pa;
-	char *sep;
+	char *sep = "";
 	char *str;
 
 	i = 0;
-	sep = "";
 	if (format == NULL)
 		return;
 	va_start(pa, format);
