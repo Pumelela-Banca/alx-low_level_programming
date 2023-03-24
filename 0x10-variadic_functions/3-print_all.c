@@ -9,8 +9,6 @@
  * Return: void
  */
 
-void lanes(char c, char *sep, const char * const format,...);
-
 void print_all(const char * const format, ...)
 {
 	int i; va_list pa; char *sep; char *str;
