@@ -13,9 +13,10 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	va_list pa;
-	char *sep = "";
+	char *sep;
 	char *str;
 
+	sep = "";
 	i = 0;
 	if (format == NULL)
 		return;
@@ -37,7 +38,7 @@ void print_all(const char * const format, ...)
 				str = va_arg(pa, char *);
 				if (str == NULL)
 				{
-					printf("%snil", sep);
+					printf("%s(nil)", sep);
 					break;
 				}
 				printf("%s%s", sep, str);
