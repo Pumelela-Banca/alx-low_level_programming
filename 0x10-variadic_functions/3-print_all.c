@@ -11,41 +11,52 @@
 
 void print_all(const char * const format, ...)
 {
-	int i, j; float f; char *str; char c;
-	const char *names;
+	int j, i; char *names; float f; int in; char ll; char *str;
 	char *sep;
 
 	va_list pa;
 
+	if (format == NULL)
+		return;
+
 	va_start(pa, format);
 	sep = "";
-	names = format;
 	j = 0;
-	while (names[j] != '\0')
+	names = "cifs";
+	while (format[j] != '\0')
 	{
-		switch (names[j])
+		i = 0;
+		while (names[i] != '\0')
 		{
-			case 'f':
-				f = va_arg(pa, double);
-				printf("%s%f", sep , f);
-				break;
-			case 'd':
-				i = va_arg(pa, int);
-				printf("%s%d", sep , i);
-				break;
-			case 'c':
-				c = va_arg(pa, int);
-				printf("%s%c", sep ,c);
-				break;
-			case 's':
-				str = va_arg(pa, char *);
-				if (str == NULL)
+			if (format[j] == names[i])
+			{
+				switch (names[i])
 				{
-					str = "nil";
+					case 'f':
+						f = va_arg(pa, double);
+						printf("%s%f", sep , f);
+						break;
+					case 'i':
+						in = va_arg(pa, int);
+						printf("%s%d", sep , in);
+						break;
+					case 'c':
+						ll = va_arg(pa, int);
+						printf("%s%c", sep , ll);
+						break;
+					case 's':
+						str = va_arg(pa, char *);
+						if (str == NULL)
+							printf("%snil", sep);
+						else
+							printf("%s%s", sep, str);
+						break;
 				}
-				printf("%s%s", sep, str);
+				sep = ", ";
+				break;
+			}
+			i++;
 		}
-		sep = ", ";
 		j++;
 	}
 	va_end(pa);
