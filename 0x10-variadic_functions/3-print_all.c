@@ -9,56 +9,44 @@
  * Return: void
  */
 
+void lanes(char c, char *sep, const char * const format,...);
+
 void print_all(const char * const format, ...)
 {
-	int j, i; char *names; float f; int in; char ll; char *str;
-	char *sep;
+	int i; va_list pa; char *sep, *str;
 
-	va_list pa;
-
+	i = 0;
+	sep = "";
 	if (format == NULL)
 		return;
-
 	va_start(pa, format);
-	sep = "";
-	j = 0;
-	names = "cifs";
-	while (format[j] != '\0')
+	while (format[i])
 	{
-		i = 0;
-		while (names[i] != '\0')
+		switch (format[i])
 		{
-			if (format[j] == names[i])
-			{
-				switch (names[i])
-				{
-					case 'f':
-						f = va_arg(pa, double);
-						printf("%s%f", sep , f);
-						break;
-					case 'i':
-						in = va_arg(pa, int);
-						printf("%s%d", sep , in);
-						break;
-					case 'c':
-						ll = va_arg(pa, int);
-						printf("%s%c", sep , ll);
-						break;
-					case 's':
-						str = va_arg(pa, char *);
-						if (str == NULL)
-							printf("%snil", sep);
-						else
-							printf("%s%s", sep, str);
-						break;
-				}
-				sep = ", ";
+			case 'c':
+				printf("%s%c", sep , va_arg(pa, int));
 				break;
-			}
-			i++;
+			case 'i':
+				printf("%s%d", sep , va_arg(pa, int));
+				break;
+			case 'f':
+				printf("%s%f", sep , va_arg(pa, double));
+				break;
+			case 's':
+				str = va_arg(pa, char *);
+				if (str == NULL)
+					printf("%snil", sep);
+				else
+					printf("%s%s", sep, str);
+				break;
+			default:
+				i++;
+				continue;
 		}
-		j++;
+		sep = ", ";
+		i++;
 	}
-	va_end(pa);
 	printf("\n");
+	va_end(pa);
 }
