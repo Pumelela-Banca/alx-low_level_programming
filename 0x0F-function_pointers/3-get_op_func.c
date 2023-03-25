@@ -2,12 +2,11 @@
 #include <string.h>
 
 /**
- *
  * get_op_func - Select correct function to perfom action
  *
  * @s: operand to use
  *
- * Return: IInt value.
+ * Return: Int value.
  */
 
 int (*get_op_func(char *s))(int a, int b)
@@ -27,6 +26,7 @@ int (*get_op_func(char *s))(int a, int b)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
+		i++;
 	}
 	return (0);
 }
