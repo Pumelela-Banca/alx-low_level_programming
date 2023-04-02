@@ -14,6 +14,11 @@ void free_list(list_t *head)
 {
 	list_t hold;
 
+	if (head == NULL)
+	{
+		return;
+	}
+
 	while (head != NULL)
 	{
 		hold.next = head->next;
