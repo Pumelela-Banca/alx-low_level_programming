@@ -21,9 +21,10 @@ void free_list(list_t *head)
 
 	while (head != NULL)
 	{
-		hold = head->next;
+		hold = head;
 		hold->str = NULL;
-		free(head);
-		head = hold->next;
+		head = head->next;
+		free(hold);
+		
 	}
 }
