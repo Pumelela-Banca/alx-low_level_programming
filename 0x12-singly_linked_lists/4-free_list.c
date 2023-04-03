@@ -22,6 +22,7 @@ void free_list(list_t *head)
 	while (head != NULL)
 	{
 		hold.next = head->next;
+		hold.str = NULL;
 		free(head);
 		head = hold.next;
 	}
