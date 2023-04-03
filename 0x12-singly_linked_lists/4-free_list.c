@@ -22,8 +22,11 @@ void free_list(list_t *head)
 	while (head != NULL)
 	{
 		hold = head;
+		free(hold->str);
+		hold->str = NULL;
+		free(hold->len);
+		hold->len = NULL;
 		head = head->next;
 		free(hold);
-		
 	}
 }
