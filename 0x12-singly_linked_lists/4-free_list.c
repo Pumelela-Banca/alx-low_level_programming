@@ -23,6 +23,7 @@ void free_list(list_t *head)
 	{
 		hold = head;
 		hold->str = NULL;
+		hold->len = 0;
 		head = head->next;
 		free(hold);
 		
