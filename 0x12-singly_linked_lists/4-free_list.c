@@ -24,8 +24,6 @@ void free_list(list_t *head)
 		hold = head;
 		free(hold->str);
 		hold->str = NULL;
-		free(hold->len);
-		hold->len = NULL;
 		head = head->next;
 		free(hold);
 	}
