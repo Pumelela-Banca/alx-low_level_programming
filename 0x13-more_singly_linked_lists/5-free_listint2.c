@@ -26,15 +26,13 @@ void free_listint2(listint_t **head)
 
 void free_listint(listint_t *head)
 {
-        listint_t *hold;
-
-        if (head == NULL)
-                return;
-
-        while (head != NULL)
-        {
-                hold = head;
-                head = head->next;
-                free(hold);
-        }
+	listint_t *hold;
+	if (head == NULL)
+		return;
+	while (head != NULL)
+	{
+		hold = head;
+		head = head->next;
+		free(hold);
+	}
 }
