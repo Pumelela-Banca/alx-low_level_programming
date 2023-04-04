@@ -16,7 +16,6 @@ void free_listint2(listint_t **head)
 }
 
 /**
- *
  * free_listint - free list of ints
  *
  * @head: first item on list
@@ -27,6 +26,7 @@ void free_listint2(listint_t **head)
 void free_listint(listint_t *head)
 {
 	listint_t *hold;
+
 	if (head == NULL)
 		return;
 	while (head != NULL)
