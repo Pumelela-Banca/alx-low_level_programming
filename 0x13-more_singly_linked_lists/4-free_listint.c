@@ -2,7 +2,6 @@
 #include "lists.h"
 
 /**
- *
  * free_listint - free list of ints
  *
  * @head: first item on list
