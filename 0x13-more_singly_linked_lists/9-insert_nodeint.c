@@ -58,7 +58,7 @@ listint_t *add_node_center(listint_t **head, const int n, unsigned int idx)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	for (c = 0; c < (idx + 1); c++)
+	for (c = 1; c < (idx + 1); c++)
 	{
 		temp = temp->next;
 		if (c == idx)
