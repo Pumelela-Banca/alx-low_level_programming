@@ -7,6 +7,7 @@
  *
  * @head: list head.
  * @idx: index to insert node in
+ * @n: data to be stored
  *
  * Return: address of node.
  */
@@ -20,21 +21,24 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	c = listint_len(cpy);
 	if (*head == NULL)
 		return (NULL);
-	if ((idx + 2) > c)
+	if ((idx + 1) > c)
 		return (NULL);
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
 	if (idx == 0)
 	{
-		new = malloc(sizeof(listint_t));
-		if (new == NULL)
-			return (NULL);
-		new->n = n;
 		new->next = cpy;
 		*head = new;
-		return (cpy);
+		return (new);
 	}
-	else if ((idx + 1) == c)
+	if ((idx + 1) == c)
 	{
-		new = add_nodeint_end(&cpy, n);
+		new->next = NULL;
+		while (cpy->next != NULL)
+			cpy = cpy->next;
+		cpy->next = new;
 		return (new);
 	}
 	else
