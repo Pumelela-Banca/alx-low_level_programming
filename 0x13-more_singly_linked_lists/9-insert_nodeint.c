@@ -58,15 +58,17 @@ listint_t *add_node_center(listint_t **head, const int n, unsigned int idx)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	for (c = 1; c < (idx + 1); c++)
+	c = 1;
+	while (c < (idx + 1))
 	{
-		temp = temp->next;
 		if (c == idx)
 		{
 			new->next = temp->next;
 			temp->next = new;
 			return (new);
 		}
+		temp = temp->next;
+		c++;
 	}
 	return (NULL);
 }
@@ -94,6 +96,37 @@ size_t listint_len(const listint_t *h)
 	return (i);
 }
 
+/**
+ * add_nodeint_end - adds node to end of function
+ *
+ * @head: list to add to
+ * @n: data in node
+ *
+ * Return: address of new element
+ */
+
+listint_t *add_nodeint_end(listint_t **head, const int n)
+{
+	listint_t *new, *last;
+
+	last = *head;
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	new->next = NULL;
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
+	while (last->next != NULL)
+	{
+		last = last->next;
+	}
+	last->next = new;
+	return (new);
+}
 
 /**
  * add_nodeint - add node to start of list
