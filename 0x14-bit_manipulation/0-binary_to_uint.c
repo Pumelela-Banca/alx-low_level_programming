@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * binary_to_uint - convert binary to int
@@ -43,12 +42,12 @@ unsigned int binary_to_uint(const char *b)
  * Return: result of power
  */
 
-int myPow(int x,int n)
+int myPow(int x, int n)
 {
 	int i; /* Variable used in loop counter */
 	int number = 1;
 
 	for (i = 0; i < n; i++)
 		number *= x;
-	return(number);
+	return (number);
 }
