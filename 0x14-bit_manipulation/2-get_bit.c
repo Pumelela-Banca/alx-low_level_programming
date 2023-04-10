@@ -15,7 +15,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	int *bin;
 	int i;
 
-	bin = malloc(sizeof(int) * 32);
+	bin = malloc(sizeof(int) * 64);
 	if (bin == NULL)
 		return (-1);
 	i = 0;
