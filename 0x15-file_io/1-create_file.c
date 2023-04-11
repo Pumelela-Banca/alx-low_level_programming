@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/stat.h>
+#include <unistd.h>
 
 /**
  * create_file - creates a file
@@ -9,7 +10,7 @@
  * @filename: name of file
  * @text_content: things innside the file
  *
- * Returns: 1 on success, -1 on failure
+ * Return: 1 on success, -1 on failure
  */
 
 int create_file(const char *filename, char *text_content)
@@ -26,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 		i = fputs("", fptr);
 	else
 	{
-		i = fputs(text_content, fptr);
+		i = write(fptr, text_content , sizeof(text_content) - 1);
 	}
 	if (i < 0)
 		return (-1);
