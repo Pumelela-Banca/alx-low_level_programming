@@ -23,14 +23,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fptr == NULL)
 		return (0);
 	c = fgetc(fptr);
-	if (c == NULL)
-		return(0);
 	count = 0;
 	while (c != EOF)
 	{
 		if (letters == count)
 			break;
 		count += _putchar(c);
+		if (count == 0)
+			return (0);
 		c = fgetc(fptr);
 	}
 	fclose(fptr);
