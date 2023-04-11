@@ -31,11 +31,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		count += _putchar(c);
 		c = fgetc(fptr);
 	}
-	if (count != letters)
-	{
-		fclose(fptr);
-		return (0);
-	}
 	fclose(fptr);
 	return (count);
 }
