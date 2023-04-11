@@ -14,7 +14,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	unsigned int bytwrttn;
-	int file;
+	int file, len;
 
 	if (filename == NULL)
 		return (-1);
@@ -24,8 +24,10 @@ int create_file(const char *filename, char *text_content)
 	file = open(filename, O_WRONLY | O_APPEND);
 	if (file == -1)
 		return (-1);
-	bytwrttn = write(file, text_content, sizeof(text_content) - 1);
-	if (bytwrttn < sizeof(text_content) - 1)
+	for (len = 1; text_content[len] != '\0'; len++)
+	{}
+	bytwrttn = write(file, text_content, len - 1);
+	if (bytwrttn < len - 1)
 		return (-1);
 	close(file);
 	return (1);
