@@ -8,7 +8,7 @@
  * @filename: name of input file
  * @letters: characters to read and print
  *
- * Returns the number of letters that could be read
+ * Return: the number of letters that could be read
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -23,6 +23,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fptr == NULL)
 		return (0);
 	c = fgetc(fptr);
+	if (c == NULL)
+		return(0);
 	count = 0;
 	while (c != EOF)
 	{
