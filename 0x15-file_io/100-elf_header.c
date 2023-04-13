@@ -6,10 +6,10 @@
 
 
 /*hdr_in prototype */
-void hdr_ind(ELF64_Ehdr e_ident);
+void hdr_ind(ELF64_Ehdr *e_idt);
 
 /*hdr_type prototype*/
-void hdr_type(ELF64_Ehdr *hh)
+void hdr_type(ELF64_Ehdr *hh);
 
 /**
  * main - entry point
