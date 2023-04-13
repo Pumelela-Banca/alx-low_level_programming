@@ -41,13 +41,13 @@ int main(int argc, char **argv)
 	if (n != sizeof(hdr))
 	{
 		dprintf(STDERR_FILENO, "Error: Not an ELF file - %s\n", argv[1]);
-		close(fd);
+		close(file);
 		exit(98);
 	}
 	printf("ELF Header:\n");
 	printf("  Magic:   ");
-	for (n = 0; n < EI_NIDENT; n++)
-		printf("%02x ", hdr.e_ident[n]);
+	for (n = 0; x < EI_NIDENT; x++)
+		printf("%02x ", hdr.e_ident[x]);
 	
 	printf("\n  Class:                             ");
 	printf("%s\n", hdr.e_ident[EI_CLASS] == ELFCLASS64 ? "ELF64" : "ELF32");
@@ -59,11 +59,11 @@ int main(int argc, char **argv)
 			hdr.e_ident[EI_VERSION] == EV_CURRENT ? "(current)" : "");
 	printf("  OS/ABI:                            ");
 	hdr_ind(&hdr);
-	printf("\n  ABI Version:                       %d\n", ehdr.e_ident[EI_ABIVERSION]);
+	printf("\n  ABI Version:                       %d\n", hdr.e_ident[EI_ABIVERSION]);
 	printf("  Type:                              ");
 	hdr_type(&hdr);
-	printf("\n  Entry point address:               %#lx\n", ehdr.e_entry);
-	close(fd);
+	printf("\n  Entry point address:               %#lx\n", hdr.e_entry);
+	close(file);
 	return (0);
 }
 
@@ -95,7 +95,7 @@ void hdr_type(ELF64_Ehdr *hh)
 			printf("CORE (Core file)");
 			break;
 		default:
-			printf("<unknown>: %x", ehdr.e_type);
+			printf("<unknown>: %x", hh.e_type);
 			break;
 	}
 }
@@ -135,7 +135,7 @@ void hdr_ind(ELF64_Ehdr *e_idt)
 			printf("UNIX - FreeBSD");
 			break;
 		default:
-			printf("<unknown: %x>", ehdr.e_ident[EI_OSABI]);
+			printf("<unknown: %x>", e_idt.e_ident[EI_OSABI]);
 			break;
 	}
 }
