@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "2-append_text_to_file.c"
 #include "main.h"
 
 /**
