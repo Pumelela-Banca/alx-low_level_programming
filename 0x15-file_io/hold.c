@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -8,15 +7,12 @@
 #define BUFFER_SIZE 1024
 
 /**
- * main- entry point for a copying program
- *
- * @argc: number of arguments
- * @argv: arguments
- *
- * Return: void
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 on success, 97-100 on error
  */
-
-void main(int argc, char argv[])
+int main(int argc, char **argv)
 {
     int fr_fd, to_fd;
     ssize_t n;
