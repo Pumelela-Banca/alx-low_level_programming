@@ -16,7 +16,7 @@
  * Return: void
  */
 
-void main(int argc, char argv[])
+int main(int argc, char **argv)
 {
     int fr_fd, to_fd;
     ssize_t n;
@@ -40,7 +40,8 @@ void main(int argc, char argv[])
         close(fr_fd);
         exit(99);
     }
-    while ((n = read(fr_fd, buffer, BUFFER_SIZE)) > 0)
+    n = read(fr_fd, buffer, BUFFER_SIZE);
+    while (n > 0)
     {
         if (write(to_fd, buffer, n) != n)
         {
@@ -49,6 +50,7 @@ void main(int argc, char argv[])
             close(to_fd);
             exit(99);
         }
+        n = read(fr_fd, buffer, BUFFER_SIZE);
     }
     if (n == -1)
     {
