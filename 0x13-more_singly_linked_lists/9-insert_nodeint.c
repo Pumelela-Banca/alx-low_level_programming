@@ -60,7 +60,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 listint_t *add_node_center(listint_t **head, const int n, unsigned int idx)
 {
-	listint_t *temp, *new;
+	listint_t *temp = NULL, *new = NULL;
 	unsigned int c;
 
 	temp = *head;
@@ -68,7 +68,7 @@ listint_t *add_node_center(listint_t **head, const int n, unsigned int idx)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	c = 1;
+	c = 0;
 	while (c < (idx + 1))
 	{
 		if (c == idx)
