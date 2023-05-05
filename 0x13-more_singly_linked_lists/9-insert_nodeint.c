@@ -71,13 +71,13 @@ listint_t *add_node_center(listint_t **head, const int n, unsigned int idx)
 	c = 1;
 	while (c < (idx + 1))
 	{
+		temp = temp->next;
 		if (c == idx)
 		{
 			new->next = temp->next;
 			temp->next = new;
 			return (temp->next);
 		}
-		temp = temp->next;
 		c++;
 	}
 	return (NULL);
