@@ -8,7 +8,7 @@
  *
  * Return: Always 0.
  */
-int main(void)
+/*int main(void)
 {
     listint_t *head;
 
@@ -31,4 +31,19 @@ int main(void)
     print_listint(head);
     free_listint2(&head);
     return (0);
+}*/
+
+int main(void)
+{
+	listint_t *head;
+	listint_t *n;
+
+	head = NULL;
+	n = insert_nodeint_at_index(&head, 0, 98);
+	if (n)
+		printf("-> %d\n", n->n);
+	else
+		printf("(nil)\n");
+	print_listint(head);
+	return (0);
 }
