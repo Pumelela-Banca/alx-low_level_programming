@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fptr == NULL)
 		return (0);
 	c = fgetc(fptr);
-	count = 0;
+	count = 1;
 	while (c != EOF)
 	{
 		if (letters == count)
