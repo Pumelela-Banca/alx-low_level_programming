@@ -1,59 +1,19 @@
-#include <stdio.h>
 #include "main.h"
-#include <stddef.h>
 
-
-/**
- * _strpbrk- search string for any set of bytes
- *
- * @s: searchfrom this string
- * @acceppt: search  these words
- *
- * Return: string containing all found chars
- */
-
-
-char *_strpbrk(char *s, char *accept)
+void _print_rev_recursion(char *s)
 {
-	int i, c, posi1;
-    char *new;
-
-
-	posi1 = 100000;
-
-	for (i = 0; accept[i] != '\0'; i++)
-	{
-		for (c =  0; s[c] != '\0'; c++)
-		{
-			if (accept[i] == s[c] && posi1 > c)
-				posi1 = c;
-		}
-	}
-	if (posi1 < 100000)
-	{
-        new[0] = *(s + posi1); 
-		for (i = 1; s[posi1] != '\0'; i++)
-		{
-            posi1++;
-			new[i] = *(s + posi1);
-		}
-		return (new);
-	}
-	return (NULL);
+        if (*s++ != '\0')
+        {
+                _print_rev_recursion(s);
+                putchar(*s);
+        }
 }
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
+int main()
 {
-    char *s = "2222l";
-    char *f = "world";
-    char *t;
 
-    t = _strpbrk(s, f);
-    printf("%s\n", t);
-    return (0);
+
+    char r[] = "012345678";
+	_print_rev_recursion("012345678");
+	return 0;
 }

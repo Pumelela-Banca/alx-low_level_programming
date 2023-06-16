@@ -43,8 +43,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		nn = va_arg(ap, char *);
 		nul_not(nn);
 	}
-	printf("\n");
 	va_end(ap);
+	printf("\n");
 }
 
 /**

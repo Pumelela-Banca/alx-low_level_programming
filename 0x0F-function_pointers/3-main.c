@@ -20,8 +20,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	if (!(strcmp(argv[2], "%%")) || !(strcmp(argv[2], "+")))
+	{
+		printf("Error2\n");
+		exit(99);
+	}
+	
 	if (((atoi(argv[3]) == 0) && (strcmp(argv[2], "/") == 0)) || 
-			((atoi(argv[3]) == 0) && (strcmp(argv[2], "%") == 0)))
+			((atoi(argv[3]) == 0) && (strcmp(argv[2], "%%") == 0)))
 	{
 		printf("Error\n");
 		exit(100);
