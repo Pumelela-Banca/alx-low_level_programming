@@ -23,9 +23,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 			free_array(array);
 			return (NULL);
 		}
-		bb->key = NULL;
-		bb->value = NULL;
-		bb->next = NULL;
 		array[i] = bb;
 	}
 	table->size = size;
@@ -40,12 +37,12 @@ hash_table_t *hash_table_create(unsigned long int size)
  * Return: void
  */
 
-void free_array(hash_node_t *array)
+void free_array(hash_table_t *array)
 {
 	int i = 0;
 
-	for (i; array[i] != '\0'; i++)
+	for (i; array->array[i] != '\0'; i++)
 	{
-		free(array[i]);
+		free(array->array[i]);
 	}
 }
