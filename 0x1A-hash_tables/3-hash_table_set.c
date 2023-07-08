@@ -24,10 +24,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new == NULL)
 		return (0);
 	new->key = malloc(sizeof(key) + 1);
-	if (new->key = NULL)
+	if (new->key == NULL)
 		return (0);
 	new->value = malloc(sizeof(value) + 1);
-	if (new->value = NULL)
+	if (new->value == NULL)
 		return (0);
 	temp = ht->array[idx];
 	ht->size = len_hash;
@@ -38,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		whle (temp->next != NULL)
+		while(temp->next != NULL)
 			temp = temp->next;
 		temp->next = new;
 	}
