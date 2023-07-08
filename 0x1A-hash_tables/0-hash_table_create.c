@@ -29,6 +29,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 			return (NULL);
 		}
 		table->array[i] = bb;
+		bb->next = NULL;
+		bb->value = NULL;
+		bb->key = NULL;
 	}
 	table->size = size;
 	return (table);

@@ -17,18 +17,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (key == NULL)
 		return (0);
-	len_hash = size_hash(ht);
-	idx = key_index((const unsigned char *)key, len_hash);
+	len_hash = sizeof(ht->array) / sizeof(ht->array[0]);
+	idx = key_index((unsigned char *)key, len_hash);
 
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (0);
 	temp = ht->array[idx];
 	ht->size = len_hash;
-	if (temp == NULL)
+	if (temp->next == NULL)
 	{
 		temp = new;
-		new->next = NULL;
+		temp->next = NULL;
 	}
 	else
 	{
