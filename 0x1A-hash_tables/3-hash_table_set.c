@@ -27,17 +27,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ht->size = len_hash;
 	if (temp->next == NULL)
 	{
-		temp = new;
-		temp->next = NULL;
+		ht->array[idx] = new;
+		ht->array[idx]->next = NULL;
 	}
 	else
 	{
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
+		while (ht->array[idx]->next != NULL)
+			ht->array[idx] = ht->array[idx]->next;
+		ht->array[idx]->next = new;
 	}
-	new->key = strdup(key);
-	new->value = strdup(value);
+	ht->array[idx]->key = strdup(key);
+	if (value == NULL)
+		ht->array[idx]->value = (char *)value;
+	else
+		ht->array[idx]->value = strdup(value);
 	return (1);
 }
 
