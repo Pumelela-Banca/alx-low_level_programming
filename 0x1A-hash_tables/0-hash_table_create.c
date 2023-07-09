@@ -24,8 +24,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 		bb = malloc(sizeof(hash_node_t));
 		if (bb == NULL)
 		{
-			free(table);
 			free_array(table->array);
+			free(table);
 			return (NULL);
 		}
 		table->array[i] = bb;
