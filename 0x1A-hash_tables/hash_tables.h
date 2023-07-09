@@ -44,6 +44,6 @@ unsigned long int size_hash(hash_table_t *ht);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
 void print_list(hash_node_t *head);
-
+void free_list(hash_node_t *h);
 
 #endif
