@@ -37,6 +37,8 @@ void free_list(hash_node_t *h)
 	while (h->next != NULL)
 	{
 		temp = h;
+		free(h->key);
+		free(h->value);
 		free(h);
 		h = temp->next;
 	}
