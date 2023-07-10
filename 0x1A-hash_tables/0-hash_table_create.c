@@ -23,17 +23,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	for (i = 0; i < size; i++)
 	{
-		bb = malloc(sizeof(hash_node_t));
-		if (bb == NULL)
-		{
-			free_array(table->array);
-			free(table);
-			return (NULL);
-		}
-		table->array[i] = bb;
-		bb->next = NULL;
-		bb->value = NULL;
-		bb->key = NULL;
+		table->array[i] = NULL;
 	}
 	table->size = size;
 	return (table);
