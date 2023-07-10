@@ -1,0 +1,3 @@
+1- on Q-0 leave list indexes empty
+a - do not malloc for node
+2 - n Q-3 change function to create on empty indexes
