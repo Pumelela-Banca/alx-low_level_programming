@@ -26,7 +26,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 	{
-		hash_table_delete(ht);
 		return (0);
 	}
 	if (temp->next != NULL)
