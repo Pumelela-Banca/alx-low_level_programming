@@ -22,26 +22,30 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	temp = ht->array[idx];
 	ht->size = len_hash;
 	new = malloc(sizeof(hash_node_t));
-
 	if (new == NULL)
 	{
 		return (0);
 	}
-	new->key = malloc(sizeof(strlen(key)) + 1);
-	if (temp->next != NULL)
+	if (temp->key != NULL)
 	{
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
-		strcpy(new->key, key);
+		new->next = temp;
 		new->value = strdup(value);
-		new->next = NULL;
+		/*new->key = malloc(sizeof(strlen(key)) + 1);*/
+		/*if (new->key == NULL)*/
+		/*	return (0);*/
+		/*strcpy(new->key, key);*/
+		new->key = strdup(key);
+		ht->array[idx] = new;
 	}
-	else if (temp->next == NULL)
+	else if (temp->key == NULL)
 	{
 		temp->value = strdup(value);
-		strcpy(new->key, key);
-		temp->next = new;
+		/*temp->key = malloc(sizeof(strlen(key)) + 1);*/
+		/*if (temp->key == NULL)*/
+		/*	return (0);*/
+		/*strcpy(temp->key, key);*/
+		temp->key = strdup(key);
+		free(new);
 	}
 	return (1);
 }
