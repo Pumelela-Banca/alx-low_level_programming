@@ -31,7 +31,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	bb->next = NULL;
 	bb->value = NULL;
 	bb->key = NULL;
-	for (i = 0; i < size; i++)
+	for (i = 1; i < size; i++)
 		table->array[i] = NULL;
 	table->size = size;
 	return (table);
