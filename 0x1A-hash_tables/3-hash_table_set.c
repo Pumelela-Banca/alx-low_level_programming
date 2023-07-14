@@ -18,14 +18,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (key == NULL || ht->array == NULL
 			|| ht == NULL)
 		return (0);
-	len_hash = ht->size; 
+	len_hash = ht->size;
 	idx = key_index((unsigned char *)key, len_hash);
 	temp = ht->array[idx];
 	ht->size = len_hash;
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (0);
-	if ( ht->array[idx] == NULL)
+	if (ht->array[idx] == NULL)
 	{
 		ht->array[idx] = new;
 		new->value = strdup(value);
