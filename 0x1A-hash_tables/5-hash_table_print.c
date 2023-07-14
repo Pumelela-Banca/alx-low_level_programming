@@ -58,6 +58,7 @@ void print_list(hash_node_t *head)
 	while (head != NULL)
 	{
 		printf("'%s': '%s'", head->key, head->value);
+		printf(", ");
 		head = head->next;
 	}
 }
