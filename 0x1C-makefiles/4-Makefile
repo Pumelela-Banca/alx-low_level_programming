@@ -10,7 +10,7 @@ all: $(OBJ)
 
 .PHONY: clean oclean fclean re
 clean:
-	$(RM) -f *\~ *.swp $(NAME)
+	$(RM) -f $(wildcard *\~) $(wildcard *.swp) $(NAME)
 oclean:
 	$(RM) -f $(OBJ)
 fclean:
