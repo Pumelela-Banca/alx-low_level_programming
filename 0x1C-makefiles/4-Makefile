@@ -10,9 +10,9 @@ all: $(OBJ)
 
 .PHONY: clean oclean fclean re
 clean:
-	$(RM) -f $(wildcard *\~) $(wildcard *.swp) $(NAME)
+	-$(RM) -f $(wildcard *\~) $(wildcard *.swp) $(NAME)
 oclean:
-	$(RM) -f $(OBJ)
+	-$(RM) -f $(OBJ)
 fclean:
-	$(RM)  -f *\~ *swp $(NAME) $(OBJ)
+	-$(RM)  -f *\~ *swp $(NAME) $(OBJ)
 re: oclean all

@@ -9,9 +9,9 @@ all: $(OBJ)
 
 .PHONY: clean oclean fclean re
 clean:
-	$(RM) -f *\~ *.swp $(NAME)
+	-$(RM) -f *\~ *.swp $(NAME)
 oclean:
-	$(RM) -f $(OBJ)
+	-$(RM) -f $(OBJ)
 fclean:
-	$(RM)  -f *\~ *swp $(NAME) $(OBJ)
+	-$(RM)  -f *\~ *swp $(NAME) $(OBJ)
 re: oclean all
