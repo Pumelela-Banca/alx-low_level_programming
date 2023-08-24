@@ -8,7 +8,6 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(OBJ)
         $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-.PHONY: clean oclean fclean re
 clean:
 	-$(RM) -f $(wildcard *\~) $(wildcard *.swp) $(NAME)
 oclean:
